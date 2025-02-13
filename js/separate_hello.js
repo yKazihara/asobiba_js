@@ -1,1 +1,1 @@
-document.write("<p>別のJavaScriptファイルの読み込みテスト</p>");
+document.write("<p>Hello!! JavaScript 別のJavaScriptファイルの読み込みテストだよ</p>");
