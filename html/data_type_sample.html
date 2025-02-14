@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 10;
+  console.log(num); // 10
+
+  num = 70 + 45 * 3;
+  console.log(num); // 205
+
+  console.log(typeof(10)); // number
+  console.log(typeof(3.14)); // number
+
+  console.log("-----");
+
+  num = 52n; // 長整数
+  console.log(num); // 52n
+
+  num = 21n + 8n;
+  console.log(num); // 29n
+
+  console.log(typeof(12n)); // bigint
+
+  console.log("-----");
+
+  let msg = 'Hello';
+  console.log(msg); // Hello
+
+  let address = "東京都千代田区";
+  console.log(address); // 東京都千代田区
+
+  console.log(typeof(address)); // string
+
+  console.log("-----");
+
+  console.log(10 > 5); // true
+  console.log('ABC' == 'abc'); // false
+
+  console.log("-----");
+
+  let flag = true;
+  console.log(flag); // true
+  console.log(typeof(flag)); // boolean
+
+  console.log("-----");
+
+  let num1;
+  console.log(num1); // undefined
+  console.log(typeof(num1)); // undefined
+
+  console.log("-----");
+
+  let name1 = null;
+  console.log(name1); // null
+  console.log(typeof(name1)); // object
+
+  console.log("-----");
+
+  let s1 = Symbol();
+  let s2 = Symbol();
+
+  console.log(s1 === s2); // false
+  console.log(typeof(s1)); // symbol
+</script>
+</body>
+</html>
