@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 17;
+  let obj = new Number(num);
+  console.log(obj.toString(2)); // 10001
+
+  console.log("-----");
+
+  num = 10;
+  console.log(typeof num); // number
+
+  console.log("-----");
+
+  let numObj = new Number(num);
+  console.log(typeof numObj); // object
+  console.log(num === numObj); // false
+
+  console.log("-----");
+
+  num = Number(10);
+  console.log(typeof num); // number
+
+  console.log("-----");
+</script>
+</body>
+</html>
