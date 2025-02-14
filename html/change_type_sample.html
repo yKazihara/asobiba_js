@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 100
+
+  let str1 = String(num);
+  console.log(typeof str1); // string
+
+  let str2 = num.toString();
+  console.log(typeof str2); // string
+
+  console.log("-----");
+
+  let symbol = Symbol();
+  console.log(symbol.toString()); // Symbol()
+  // シンボルは文字列にはできないらしい
+
+  console.log("-----");
+
+  let str3 = "50";
+  let num3 = str3 - 3;
+  console.log(num3); // 47
+  console.log(typeof num3); // number
+
+  let num4 = Number(str3);
+  console.log(typeof num4); // number
+
+  let num5 = Number(null);
+  console.log(num5); // 0
+  console.log(typeof num5); // number
+
+  console.log("-----");
+
+  let bool0 = Boolean(0);
+  let bool1 = Boolean(1);
+
+  console.log(typeof bool0); // boolean
+
+  console.log(bool0); // false
+  console.log(bool1); // true
+
+  console.log(Boolean('')); // false
+  console.log(Boolean('Hello')); // true
+  console.log(Boolean([120])); // true
+</script>
+</body>
+</html>
