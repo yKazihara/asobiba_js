@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num1 = 34.5642;
+
+  console.log(num1.toPrecision()); // 34.5642
+  console.log(num1.toPrecision(3)); // 全体で3桁 34.6
+  console.log(num1.toPrecision(5)); // 全体で5桁 34.564
+  console.log(num1.toPrecision(8)); // 全体で8桁 34.564200
+
+  console.log("-----");
+
+  let num2 = 5678.9
+
+  console.log(num2.toPrecision()); // 5678.9
+  console.log(num2.toPrecision(2)); // 全体で2桁 5.7e+3
+  console.log(num2.toPrecision(3)); // 全体で3桁 5.68e+3
+  console.log(num2.toPrecision(4)); // 全体で4桁 5679
+  console.log(num2.toPrecision(6)); // 全体で6桁 5678.90
+</script>
+</body>
+</html>
