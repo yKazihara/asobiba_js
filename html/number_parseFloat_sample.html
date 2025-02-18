@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  // 2番目の引数はn進数の指定らしい
+  console.log(Number.parseFloat("42.25")); // 42.25
+
+  console.log(Number.parseFloat('  -1.75per')); // -1.75
+
+  console.log(Number.parseFloat('3.11e4')); // 31100
+
+  console.log(Number.parseFloat('Since1901')); // NaN 変換できない
+</script>
+</body>
+</html>
