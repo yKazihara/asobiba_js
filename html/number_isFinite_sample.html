@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(Number.isFinite(Infinity)); // false
+
+  console.log(Number.isFinite(-Infinity)); // false
+
+  console.log(Number.isFinite(NaN)); // false
+
+  console.log("-----");
+
+  console.log(Number.isFinite(442)); // true
+
+  console.log(Number.isFinite(0)); // true
+
+  console.log(Number.isFinite(-1.225e-3)); // true
+
+  console.log("-----");
+
+  console.log(Number.isFinite('78')); // false
+
+  console.log(Number.isFinite(true)); // false
+
+  console.log(Number.isFinite(undefined)); // false
+
+  console.log(Number.isFinite([10, 20])); // false
+
+  console.log("-----");
+
+  // isFinite関数とNumber.isFiniteメソッドの違い 数値しかtrue判定されない
+  console.log(isFinite(128)); // true
+  console.log(Number.isFinite(128)); // true
+
+  console.log("-----");
+
+  console.log(isFinite(Infinity)); // false
+  console.log(Number.isFinite(Infinity)); // false
+
+  console.log("-----");
+
+  console.log(isFinite('78')); // true
+  console.log(Number.isFinite('78')); // false
+
+  console.log("-----");
+
+  console.log(isFinite('')); // true
+  console.log(Number.isFinite('')); // false
+
+  console.log("-----");
+
+  console.log(isFinite(true)); // true
+  console.log(Number.isFinite(true)); // false
+
+  console.log("-----");
+
+  console.log(isFinite(null)); // true
+  console.log(Number.isFinite(null)); // false
+
+  console.log("-----");
+
+  console.log(isFinite([10])); // true
+  console.log(Number.isFinite([10])); //  false
+</script>
+</body>
+</html>
