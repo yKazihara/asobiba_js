@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(NaN == NaN); // false
+
+  console.log(NaN === NaN); // false
+
+  console.log(Number.isNaN(NaN));// true
+
+  console.log(Number.isNaN(0 / 0)); // true
+
+  // 数値しかtrue判定されない
+  console.log(Number.isNaN('Hello')); // 数値に変換すると NaNだけどfalse
+
+  console.log(Number.isNaN(undefined)); // 数値に変換すると NaNだけどfalse
+
+  console.log(Number.isNaN({a:'10'})); // 数値に変換すると NaNだけどfalse
+
+  console.log("-----");
+
+  // isNaN関数とNumber.isNaNメソッドの違い
+  console.log(isNaN(NaN)); // true
+  console.log(Number.isNaN(NaN)); // true
+
+  console.log("-----");
+
+  console.log(isNaN(0 / 0)); // true
+  console.log(Number.isNaN(0 / 0)); // true
+
+  console.log("-----");
+
+  console.log(isNaN('Hello')); // true
+  console.log(Number.isNaN('Hello')); // false
+
+  console.log("-----");
+
+  console.log(isNaN(undefined)); // true
+  console.log(Number.isNaN(undefined)); // false
+
+  console.log("-----");
+
+  console.log(isNaN({a:'10'})); // true
+  console.log(Number.isNaN({a:'10'})); // false
+</script>
+</body>
+</html>
