@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 8242.56;
+
+  // ロケール指定なし
+  console.log(num.toLocaleString()); // 8,242.56
+
+  // 日本の桁区切りと小数点
+  console.log(num.toLocaleString('ja-JP')); // 8,242.56
+
+  // ドイツの桁区切りと小数点
+  console.log(num.toLocaleString('de-DE')); // 8.242,56
+</script>
+</body>
+</html>
