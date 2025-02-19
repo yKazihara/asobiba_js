@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num0 = 854n;
+  console.log(num0); // 854n
+  num0 = -15n;
+  console.log(-15n); // -15n
+
+  let num1 = 0xB6n; // 16 進数では先頭に 0x を付ける
+  let num2 = 0o266n; // 8 進数では先頭に 0o を付ける
+  let num3 = 0b10110110n; // 2 進数では先頭に 0b を付ける
+
+  console.log("-----");
+
+  let num4 = BigInt(1024);
+  console.log(num4); // 1024n
+
+  console.log("-----");
+
+  console.log(20n + 38n); // 58n
+  console.log(45n - 16n); // 29n
+  console.log(8n * 7n); // 56n
+  console.log(34n / 8n); // 4n
+  console.log(34n % 8n); // 2n
+  console.log(9n ** 3n); // 729n
+
+  console.log("-----");
+
+  // 演算の結果は整数となり小数点以下の値は切り捨て。
+  console.log(7n / 3n);  // 2.333 >> 2n
+  console.log(8n / 3n);  // 2.666 >> 2n
+
+  console.log("-----");
+
+  console.log(54n == 54n); // true
+
+  console.log(54n == 48n); // false
+
+  console.log(38n === 38n); // true
+
+  console.log(54 == 54n); // true
+
+  console.log(54 === 54n); // false
+
+  console.log("-----");
+
+  console.log(12n > 28n); // false
+
+  console.log(34n <= 48n); // true
+
+  console.log(14 < 32n); // true
+
+  console.log(33n >= 41); // false
+
+  console.log("-----");
+
+  let num5 = 15n;
+
+  num5++;
+  console.log(num5); // 16n
+
+  --num5;
+  console.log(num5); // 15n
+</script>
+</body>
+</html>
