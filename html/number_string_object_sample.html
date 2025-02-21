@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let obj1 = new String('Hello');
+  console.log(obj1); // String {"Hello"}
+
+  let obj2 = new String(365);
+  console.log(obj2); // String {"365"}
+
+  let obj3 = new String(0xF3);
+  console.log(obj3); // String {"243"}
+
+  console.log("-----");
+
+  let obj4 = new String('北海道');
+  console.log(obj4.valueOf()); // 北海道
+
+  console.log("-----");
+
+  let obj5 = new String('沖縄県');
+  console.log(obj5.toString()); // 沖縄県
+</script>
+</body>
+</html>
