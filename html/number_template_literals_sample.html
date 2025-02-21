@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let msg1 = `こんにちは。
+今日は天気がとてもいいですね。
+散歩が気持ちいいです。`;
+
+  console.log(msg1);
+  // こんにちは。
+  // 今日は天気がとてもいいですね。
+  // 散歩が気持ちいいです。
+
+  console.log("-----");
+
+  let msg2 = `テンプレートリテラルでは\`を使用します。\n他のエスケープシーケンスも使用できます。`;
+
+  console.log(msg2);
+  // テンプレートリテラルでは`を使用します。
+  // 他のエスケープシーケンスも使用できます。
+
+  console.log("-----");
+
+  let name = 'オレンジ';
+  let cost = 100;
+
+  let msg = `今日の${name}の値段は${Math.trunc(cost*1.1)}円です。`;
+  console.log(msg);
+  // 今日のオレンジの値段は110円です。
+
+  console.log("-----");
+</script>
+</body>
+</html>
