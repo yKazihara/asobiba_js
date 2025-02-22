@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let str1 = 'red bird and red flower';
+  let newstr = str1.replace('red', 'Red');
+  console.log(newstr); // Red bird and red flower
+
+  console.log("-----");
+
+  let str2 = 'BananaLemonOrange';
+
+  console.log(str2.replace('Lemon', '[$&]')); // Banana[Lemon]Orange
+  console.log(str2.replace('Lemon', '[$`]')); // Banana[Banana]Orange
+  console.log(str2.replace('Lemon', '[$\']')); // Banana[Orange]Orange
+</script>
+</body>
+</html>
