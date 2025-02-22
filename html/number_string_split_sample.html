@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let months1 = 'Jan..Feb..Mar..Apr..May..Jun';
+  let monthAry1 = months1.split('..');
+  console.log(monthAry1); // (6) ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+
+  console.log("-----");
+
+  let months2 = '/Jan/Feb/Mar/Apr/May/Jun/';
+  let monthAry2 = months2.split('/');
+
+  console.log(monthAry2); // (8) ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun", ""]
+
+  console.log("-----");
+
+  let months3 = 'Jan..Feb..Mar..Apr..May..Jun';
+  let monthAry3 = months3.split('..', 3);
+
+  // 区切る回数を指定したら残りは無視されちゃうんか。
+  console.log(monthAry3); // ["Jan", "Feb", "Mar"]
+
+  console.log("-----");
+</script>
+</body>
+</html>
