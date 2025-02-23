@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  // 現在は非推奨らしい。
+  let address = 'いろはにほへと';
+  let sub = address.substr(4, 2);
+  console.log(sub); // ほへ
+
+  sub = address.substr(3);
+  console.log(sub); // にほへと
+
+  console.log("-----");
+
+  sub = address.substr(-3, 2);
+  console.log(sub); // ほへ
+
+  sub = address.substr(-4);
+  console.log(sub); // にほへと
+
+  console.log("-----");
+
+  sub = address.substr(3, 0);
+  console.log(sub); // (空文字)
+
+  sub = address.substr(5, -2);
+  console.log(sub); // (空文字)
+</script>
+</body>
+</html>
