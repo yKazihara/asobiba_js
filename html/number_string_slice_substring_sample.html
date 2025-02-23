@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let address = '東京都港区芝公園';
+  let sub = address.slice(3, 5);
+  console.log(sub); // 港区
+
+  sub = address.slice(3);
+  console.log(sub); // 港区芝公園
+
+  console.log("-----");
+
+  sub = address.slice(-3, -1);
+  console.log(sub); // 芝公
+
+  sub = address.slice(-5, 5);
+  console.log(sub); // 港区
+
+  console.log("-----");
+
+  sub = address.slice(3, 4);
+  console.log(sub); // 港
+
+  sub = address.slice(3, 3);
+  console.log(sub); // (空文字)
+
+  sub = address.slice(3, 2);
+  console.log(sub); // (空文字)
+
+  console.log("-----");
+
+  address = 'JavaScript';
+  sub = address.substring(4, 7);
+  console.log(sub); // Scr
+
+  sub = address.substring(4);
+  console.log(sub); // Script
+
+  console.log("-----");
+
+  sub = address.substring(-3, 4);
+  console.log(sub); // Java
+
+  sub = address.substring(4, 15);
+  console.log(sub); // Script
+
+  console.log("-----");
+
+  sub = address.substring(3, 3);
+  console.log(sub); // (空文字)
+
+  sub = address.substring(6, 3);
+  console.log(sub); // aSc
+</script>
+</body>
+</html>
