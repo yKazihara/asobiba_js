@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let str = 'List';
+
+  console.log('\'' + str.padStart(7) + '\''); // '   List'
+
+  console.log('\'' + str.padStart(9, '-+') + '\''); // '-+-+-List'
+
+  console.log("-----");
+
+  console.log('\'' + str.padEnd(7) + '\''); // 'List   '
+
+  console.log('\'' + str.padEnd(9, '-+') + '\''); // 'List-+-+-'
+</script>
+</body>
+</html>
