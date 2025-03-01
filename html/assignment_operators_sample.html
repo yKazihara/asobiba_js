@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num;
+
+  num = 10;
+  console.log(num); // 10
+
+  console.log(num = 15); // 15
+
+  console.log("-----");
+
+  let num1;
+  let num2;
+
+  num1 = num2 = 18;
+
+  console.log(num1); // 18
+
+  console.log(num2); // 18
+
+  console.log("-----");
+
+  num = 10;
+
+  num = num + 5;  // 変数の値に5を加算したものを再び変数に代入
+  console.log(num); // 15
+
+  console.log("-----");
+
+  num = 10;
+
+  num += 5;  // 代入演算子を使って書き換え
+  console.log(num); // 15
+
+  console.log("-----");
+</script>
+</body>
+</html>
