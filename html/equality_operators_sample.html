@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let hobby = '映画';
+
+  if ( hobby == '映画') {
+    console.log('映画をみにいきましょう');
+  } else {
+    console.log('散歩にいきましょう');
+  }
+  // 映画をみにいきましょう
+
+  console.log("-----");
+
+  console.log(10 == 10); // true
+  console.log(10 == 8); // false
+  console.log('Apple' == 'Apple'); // true
+  console.log('Apple' == 'apple'); // false
+  console.log(true == true); // true
+  console.log(true == false); // false
+  console.log(null == null); // true
+  console.log(undefined == undefined); // true
+  console.log(NaN == NaN); // false
+
+  console.log("-----");
+
+  console.log(10 == '10'); // true
+  console.log(10 == '8'); // false
+  console.log(10 == 'Apple'); // false
+
+  console.log("-----");
+
+  console.log(1 == true); // true
+  console.log(0 == false); // true
+  console.log(1 == false); // false
+  console.log('1' == true); // true
+  console.log('true' == true); // false
+
+  console.log("-----");
+
+  console.log(null == undefined); // true
+  console.log(null == 0); // false
+  console.log(null == 1); // false
+
+  console.log("-----");
+
+  let obj1 = {red:'赤', blue:'青'};
+  let obj2 = {red:'赤', blue:'青'};
+  let obj3;
+
+  obj3 = obj1;
+
+  console.log(obj1 == obj2); // false
+  console.log(obj1 == obj3); // true
+
+  console.log("-----");
+
+  console.log(10 == [10]); // true
+  console.log(10 == [10, 20]); // false
+  console.log(10 == ['10']); // true
+  console.log(10 == {num:'10'}); // false
+  console.log(10 == new Number(10)); // true
+
+  console.log("-----");
+
+  console.log(10 === 10); // true
+  console.log(10 === 8); // false
+  console.log('Apple' === 'Apple'); // true
+  console.log('Apple' === 'apple'); // false
+  console.log(true === true); // true
+  console.log(true === false); // false
+  console.log(null === null); // true
+  console.log(undefined === undefined); // true
+  console.log(NaN === NaN); // false
+
+  console.log("-----");
+
+  console.log(10 === '10'); // false
+  console.log(1 === true); // false
+  console.log(0 === false); // false
+  console.log(null === undefined); // false
+  console.log(null === 0); // false
+  console.log(10 === [10]); // false
+  console.log(10 === new Number(10)); // false
+
+  console.log("-----");
+
+  let obj4 = {red:'赤', blue:'青'};
+  let obj5 = {red:'赤', blue:'青'};
+  let obj6;
+
+  obj6 = obj4;
+
+  console.log(obj4 === obj5); // false
+  console.log(obj4 === obj6); // true
+</script>
+</body>
+</html>
