@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let old = 28;
+
+  if (old > 20 && old < 30) {
+    console.log('対象年齢です');
+  } else {
+    console.log('対象年齢ではありません');
+  }
+  // 対象年齢です
+
+  console.log("-----");
+
+  let x = 10;
+  console.log(x > 20 && x < 40); // false
+
+  console.log("-----");
+
+  x = 10;
+  console.log(null && x < 30); // null
+  // null は false として扱われるので x < 30 の評価は行わず、式全体の評価として null が返される
+
+  console.log("-----");
+
+  x = 30;
+  console.log(x > 20 && x < 40); // true
+
+  console.log("-----");
+
+  x = 10;
+  console.log(x > 0 && 'OK'); // OK
+  // x > 0 が true となるので式全体の評価として 'OK' が返される
+
+  console.log("-----");
+
+  let x1 = 84;
+  let y1 = 72;
+
+  console.log(x1 > 80 || y1 > 80); // true
+
+  console.log("-----");
+
+  let mail1 = 'user@example.com';
+  let user1 = '';
+
+  console.log(mail1 || user1); // user@example.com
+
+  console.log("-----");
+
+  let x2 = 75;
+  let y2 = 72;
+
+  console.log(x2 > 80 || y2 > 80); // false
+
+  console.log("-----");
+
+  let mail2 = '';
+  let user2 = 'user';
+
+  console.log(mail2 || user2); // user
+
+  console.log("-----");
+
+  let x3 = 75;
+  console.log(!(x3 > 80)); // true
+
+  console.log(! undefined); // true
+</script>
+</body>
+</html>
