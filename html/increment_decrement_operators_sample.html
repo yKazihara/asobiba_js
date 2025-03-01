@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 5;
+
+  num++;
+  console.log(num); // 6
+
+  num--;
+  console.log(num); // 5
+
+  num++;
+  console.log(num); // 6
+
+  ++num;
+  console.log(num); // 7
+
+  console.log("-----");
+
+  for (let i = 0; i < 3; i++) {
+    console.log("i = " + i);
+  }
+  // i = 0
+  // i = 1
+  // i = 2
+
+  console.log("-----");
+
+  let numA = 5;
+  let numB;
+
+  numB = numA++;
+  console.log(numA); // 6
+
+  console.log(numB); // 5
+
+  console.log("-----");
+
+  numA = 5;
+  numB;
+
+  numB = ++numA;
+  console.log(numA); // 6
+
+  console.log(numB); // 6
+
+  console.log("-----");
+</script>
+</body>
+</html>
