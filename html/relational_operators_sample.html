@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let score = 78;
+
+  if (score > 70) {
+    console.log('合格です');
+  } else {
+    console.log('不合格です');
+  }
+  // 合格です
+
+  console.log("-----");
+
+  console.log(8 < 10); // true
+
+  console.log(8 < 8); // false
+
+  console.log(8 < 6); // false
+
+  console.log("-----");
+
+  console.log(8 <= 10); // true
+
+  console.log(8 <= 8); // true
+
+  console.log(8 <= 6); // false
+
+  console.log("-----");
+
+  console.log(8 > 10); // false
+
+  console.log(8 > 8); // false
+
+  console.log(8 > 6); // true
+
+  console.log("-----");
+
+  console.log(8 >= 10); // false
+
+  console.log(8 >= 8); // true
+
+  console.log(8 >= 6); // true
+
+  console.log("-----");
+
+  console.log('a'.codePointAt(0)); // 97
+  console.log('A'.codePointAt(0)); // 65
+  console.log('A' > 'a'); // false
+
+  console.log('1'.codePointAt(0)); // 49
+  console.log('3'.codePointAt(0)); // 51
+  console.log('120' > '3'); // false
+  // 最初の文字の '1' と '3' のコードポイントが比較され、
+  // '3' のコードポイントのほうが '1' のコードポイントよりも大きいので
+  // '120' > '3' は false
+
+  console.log("-----");
+
+  console.log('120' > 3); // true
+  console.log('flower' > 3); // false
+  console.log('flower' <= 3); // false
+
+  console.log("-----");
+
+  console.log(true > false); // true
+  console.log(true > 0); // true
+  console.log(false > 0); // false
+  console.log(null >= 0); // true
+  console.log(null < 0); // false
+  console.log(undefined > 0); // false
+  console.log(undefined <= 0); // false
+</script>
+</body>
+</html>
