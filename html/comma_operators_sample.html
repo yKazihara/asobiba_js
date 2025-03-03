@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let x;
+  let y;
+  let z;
+
+  z = (x = 4, y = 8, y += x);
+  console.log(z); // 12
+
+  console.log("-----");
+
+  for (let i = 1, j = 4; i < 5; i++, j--) {
+    console.log("i = " + i + ", j = " + j);
+  }
+  // i = 1, j = 4
+  // i = 2, j = 3
+  // i = 3, j = 2
+  // i = 4, j = 1
+</script>
+</body>
+</html>
