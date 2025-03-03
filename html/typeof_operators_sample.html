@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(typeof 80); // number
+  console.log(typeof 80n); // bigint
+  console.log(typeof 'Pen'); // string
+  console.log(typeof true); // boolean
+  console.log(typeof null); // object
+  console.log(typeof NaN); // number
+  console.log(typeof undefined); // undefined
+  console.log(typeof Symbol('A')); // symbol
+  console.log(typeof [10, 20]); // object
+  console.log(typeof {a:'abc'}); // object
+
+  let func = function(){
+    return;
+  };
+  console.log(typeof func); // function
+
+  console.log("-----");
+
+  let num = 18;
+
+  if (typeof num === 'number'){
+    console.log('数値です');
+  }
+  // 数値です
+</script>
+</body>
+</html>
