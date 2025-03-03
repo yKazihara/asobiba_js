@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  for (let i = 1; i < 3; i++) {
+    console.log("i = " + i);
+  }
+  console.log('end');
+  // i = 1
+  // i = 2
+  // end
+
+  console.log("-----");
+
+  for (let i = 3; i < 10; i += 3) {
+    console.log("i = " + i);
+  }
+  // i = 3
+  // i = 6
+  // i = 9
+
+  console.log("-----");
+
+  for (let i = 5; i > 0; i--) {
+    console.log("i = " + i);
+  }
+  // i = 5
+  // i = 4
+  // i = 3
+  // i = 2
+  // i = 1
+
+  console.log("-----");
+
+  const color = ['Red', 'Blue', 'Green'];
+  for (let i = 0; i < 3; i++) {
+    console.log(color[i]);
+  }
+  // Red
+  // Blue
+  // Green
+
+  console.log("-----");
+
+  for (let i = 1, j = 4; i < 5; i++, j--) {
+    console.log("i = " + i + ", j = " + j);
+  }
+  // i = 1, j = 4
+  // i = 2, j = 3
+  // i = 3, j = 2
+  // i = 4, j = 1
+
+  console.log("-----");
+</script>
+</body>
+</html>
