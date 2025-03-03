@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      console.log('i = ' + i + ', j = ' + j);
+    }
+  }
+  // i = 0, j = 0
+  // i = 0, j = 1
+  // i = 0, j = 2
+  // i = 1, j = 0
+  // i = 1, j = 1
+  // i = 1, j = 2
+  // i = 2, j = 0
+  // i = 2, j = 1
+  // i = 2, j = 2
+
+  console.log("-----");
+
+  const result = [
+    [88, 78, 82],
+    [92, 64, 76]
+  ];
+
+  for (let i = 0; i < 2; i++) {
+    for (let j = 0; j < 3; j++) {
+      console.log('成績 = ' + result[i][j]);
+    }
+  }
+  // 成績 = 88
+  // 成績 = 78
+  // 成績 = 82
+  // 成績 = 92
+  // 成績 = 64
+  // 成績 = 76
+
+  console.log("-----");
+</script>
+</body>
+</html>
