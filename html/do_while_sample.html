@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 4;
+
+  do {
+    console.log(num);
+    num = num * 4;
+  } while (num < 100);
+  console.log('end');
+  // 4
+  // 16
+  // 64
+  // end
+
+  console.log("-----");
+
+  let dice;
+
+  do {
+    dice = Math.floor(Math.random() * 6) + 1;
+    console.log(dice);
+  } while (dice != 6);
+  console.log('end');
+  // 乱数を使って 1 から 6 までの数字を出し、 6 が出たら do...while 文が終了
+</script>
+</body>
+</html>
