@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let num = 1;
+
+  for (let i = 0; i < 10; i++) {
+    console.log(num);
+    num *= 2;
+    if (num > 10) {
+      console.log('10を超えたので繰り返し処理を抜けます')
+      break;
+    }
+  }
+  console.log('end');
+
+  // 1
+  // 2
+  // 4
+  // 8
+  // 10を超えたので繰り返し処理を抜けます
+  // end
+
+  console.log("-----");
+
+  while(true) {
+    let dice = Math.floor(Math.random() * 6) + 1;
+    console.log(dice);
+    if (dice == 6) {
+      break;
+    }
+  }
+  console.log('end');
+  // 乱数で出た数値が 6 だった場合は処理を抜ける
+</script>
+</body>
+</html>
