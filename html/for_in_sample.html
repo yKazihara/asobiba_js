@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = {orange:170, apple:90, lemon:110};
+
+  for (let i in fruit) {
+    console.log("fruit." + i + ' = ' + fruit[i]);
+  }
+  console.log('end');
+
+  // fruit.orange = 170
+  // fruit.apple = 90
+  // fruit.lemon = 110
+  // end
+
+  console.log("-----");
+
+  fruit = ['orange', 'apple', 'lemon'];
+
+  for (let i in fruit) {
+    console.log("fruit." + i + ' = ' + fruit[i]);
+  }
+  console.log('end');
+
+  // fruit.0 = orange
+  // fruit.1 = apple
+  // fruit.2 = lemon
+  // end
+</script>
+</body>
+</html>
