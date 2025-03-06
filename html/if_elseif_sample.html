@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function passCheck1(result) {
+    if (result > 90){
+      console.log('合格です');
+      console.log('おめでとうございます');
+    } else if (result > 80) {
+      console.log('修正して再提出してください');
+    } else {
+      console.log('不合格です');
+      console.log('残念でした');
+    }
+  }
+
+  passCheck1(84);
+  // 修正して再提出してください
+
+  console.log("-----");
+
+  passCheck1(92);
+  // 合格です
+  // おめでとうございます
+
+  console.log("-----");
+
+  passCheck1(68);
+  // 不合格です
+  // 残念でした
+
+  console.log("-----");
+  console.log("-----");
+
+  function passCheck2(result) {
+    if (result > 80) {
+      if (result > 90) {
+        console.log('合格です');
+        console.log('おめでとうございます');
+      } else {
+        console.log('修正して再提出してください');
+      }
+    } else {
+      console.log('不合格です');
+      console.log('残念でした');
+    }
+  }
+
+  passCheck2(78);
+  // 不合格です
+  // 残念でした
+
+  console.log("-----");
+
+  passCheck2(84);
+  // 修正して再提出してください
+
+  console.log("-----");
+
+  passCheck2(98);
+  // 合格です
+  // おめでとうございます
+</script>
+</body>
+</html>
