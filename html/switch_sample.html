@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let pref = 'Osaka';
+
+  switch (pref) {
+    case 'Tokyo':
+      console.log('住所は東京都です');
+      break;
+    case 'Osaka':
+      console.log('住所は大阪府です');
+      break;
+    default:
+      console.log('住所はその他です');
+  }
+  // 住所は大阪府です
+
+  console.log("-----");
+
+  let ans = '8月';
+
+  switch (ans) {
+    case '8月':
+    case '八月':
+    case 'August':
+      console.log('正解です');
+      break;
+    default:
+      console.log('不正解です');
+  }
+  // 正解です
+</script>
+</body>
+</html>
