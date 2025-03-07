@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let user = {
+    name:'山田太郎',
+    age:27,
+    address:'東京都'
+  }
+  console.log(user.name);
+  // 山田太郎
+
+  console.log("-----");
+
+  user.name = 'Tarou Yamada';
+  console.log(user);
+  // {name: "Tarou Yamada", age: 27, address: "東京都"}
+
+  console.log("-----");
+
+  console.log(user['name']);
+  // Tarou Yamada
+
+  console.log("-----");
+
+  user['name'] = '山田太郎';
+  console.log(user);
+  // {name: "山田太郎", age: 27, address: "東京都"}
+
+  console.log("-----");
+
+  let myprofile = {
+    '1stName':'Yamada',
+    'Favorite color':'Blue'
+  };
+
+  console.log(myprofile['1stName']);
+  // Yamada
+
+  console.log("-----");
+
+  let colorDB = {
+    red:'赤色',
+    blue:'青色',
+    yellow:'黄色'
+  }
+
+  let color = 'blue';
+  console.log(colorDB[color]);
+  // 青色
+</script>
+</body>
+</html>
