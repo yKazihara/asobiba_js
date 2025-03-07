@@ -6,6 +6,13 @@
 </head>
 <body>
 <script>
+  let obj = new Object();
+
+  console.log(obj);
+  // {}
+
+  console.log("-----");
+
   let user1 = {
     name:'山田太郎',
     age:27,
@@ -33,6 +40,17 @@
 
   console.log(user2.getAge());
   // 37
+
+  console.log("-----");
+
+  let base = 1000;
+  let mybox = {
+    width:base,
+    height:base * 0.5
+  };
+
+  console.log(mybox);
+  // {width: 1000, height: 500}
 </script>
 </body>
 </html>
