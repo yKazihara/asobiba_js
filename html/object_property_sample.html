@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let mybox = {
+    width:400,
+    height:300
+  };
+
+  mybox.color = '#FF0000';  // 新しいプロパティを追加
+  console.log(mybox);
+  // {width: 400, height: 300, color: "#FF0000"}
+
+  console.log("-----");
+
+  delete mybox.height;  // プロパティを削除
+  console.log(mybox);
+  // {width: 400, color: "#FF0000"}
+
+  console.log("-----");
+
+  delete mybox.border;  // 存在しないプロパティを削除
+  console.log(mybox);
+  // {width: 400, color: "#FF0000"}
+  // 特にエラーにはならない
+</script>
+</body>
+</html>
