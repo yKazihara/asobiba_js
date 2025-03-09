@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  const user1 = {
+    name:'山田太郎',
+    age:32,
+    address:'大阪府'
+  };
+
+  Object.freeze(user1);
+
+  user1.address = '東京都'; // プロパティの値を変更
+  console.log(user1);
+  // {name: "山田太郎", age: 32, address: "大阪府"}
+  // address は変更されない
+
+  console.log("-----");
+
+  user1.hobby = '映画'; // 新しいプロパティの追加
+  delete user1.age; // 既存のプロパティの削除
+  console.log(user1);
+  // {name: "山田太郎", age: 32, address: "大阪府"}
+  // objectは変更されない
+
+  console.log("-----");
+
+  // オブジェクトだけでなく配列も変更不可にできる
+  const point = [48, 72, 65];
+
+  Object.freeze(point);
+
+  point[1] = 78;  // 要素を変更する
+  point[3] = 54;  // 要素を追加する
+
+  console.log(point);
+  // [48, 72, 65]
+
+  console.log("-----");
+
+  let user2 = {
+    name:'山田太郎',
+    hobby:['Movie', 'Game']
+  };
+
+  Object.freeze(user2);
+
+  // プロパティの値がオブジェクトだった場合は変更できる
+  user2.name = 'Yamada Tarou'; // プロパティの値を変更する
+  user2.hobby[0] = 'Sports'; // 子オブジェクト(配列)の要素の値を変更する
+
+  console.log(user2.hobby);
+  // ["Sports", "Game"]
+
+  console.log("-----");
+
+  // 子オブジェクトも含めて変更不可にするには、
+  // 子オブジェクトに対しても freeze メソッドを呼び出す必要がある
+  let user3 = {
+    name:'山田太郎',
+    hobby:['Movie', 'Game']
+  };
+
+  Object.freeze(user3.hobby);
+  Object.freeze(user3);
+
+  user3.hobby[0] = 'Sports'; // 子オブジェクト(配列)の要素の値を変更する
+
+  console.log(user3.hobby);
+  // ["Movie", "Game"]
+</script>
+</body>
+</html>
