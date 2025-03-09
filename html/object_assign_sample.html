@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let objA = {a:'Ant'};
+  let objB = {b:'bee'};
+  let objC = {c:'cicada'};
+  let allObj = Object.assign(objA, objB, objC);
+
+  console.log(allObj);
+  // {a: "Ant", b: "bee", c: "cicada"}
+
+  console.log(objA);
+  // {a: "Ant", b: "bee", c: "cicada"}
+  // すべてのプロパティを持つ新しいオブジェクトが作成されているのではなく、
+  // assign メソッドの最初の引数のオブジェクトに他のオブジェクトのプロパティが追加される
+
+  console.log("-----");
+
+  objA = {a:'Ant'};
+  objB = {b:'bee'};
+  objC = {c:'cicada'};
+  // assign メソッドの最初に引数に空のオブジェクト {} を指定
+  allObj = Object.assign({}, objA, objB, objC);
+
+  // 既存のオブジェクトを変更せずにオブジェクトのプロパティを一つにまとめたオブジェクトを取得
+  console.log(allObj);
+  // {a: "Ant", b: "bee", c: "cicada"}
+
+  console.log(objA);
+  //{a: "Ant"}
+
+  console.log("-----");
+
+  // あとに記述されているプロパティで上書き
+  objA = {a:'Ant', b:'bee'};
+  objB = {c:'cicada', b:'butterfly'};
+  allObj = Object.assign({}, objA, objB);
+
+  console.log(allObj);
+  //> {a: "Ant", b: "butterfly", c: "cicada"}
+
+  console.log("-----");
+
+  // オブジェクトの複製を作成
+  let obj = {a:'Ant', b:'bee'};
+  let cloneObj = Object.assign({}, obj);
+
+  console.log(cloneObj);
+  // {a: "Ant", b: "bee"}
+
+  console.log(obj === cloneObj);
+  // false
+</script>
+</body>
+</html>
