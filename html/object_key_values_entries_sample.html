@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let user = {
+    name:'山田太郎',
+    age:32,
+    address:'大阪府'
+  };
+
+  let keyArray = Object.keys(user);
+  console.log(keyArray);
+  // ["name", "age", "address"]
+
+  console.log("-----");
+
+  keyArray.forEach(function(element) {
+    console.log(user[element]);
+  });
+  // 山田太郎
+  // 32
+  // 大阪府
+
+  console.log("-----");
+
+  let valueArray = Object.values(user);
+  console.log(valueArray);
+  // ["山田太郎", 32, "大阪府"]
+
+  console.log("-----");
+
+  let propertyArray = Object.entries(user);
+  propertyArray.forEach(function(element) {
+    console.log(element);
+  });
+  // ["name", "山田太郎"]
+  // ["age", 32]
+  // ["address", "大阪府"]
+</script>
+</body>
+</html>
