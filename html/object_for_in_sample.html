@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let user = {
+    name:'山田太郎',
+    age:32,
+    address:'大阪府'
+  };
+
+  for (key in user) {
+    console.log('user.'+ key + '=' + user[key]);
+  }
+  // user.name=山田太郎
+  // user.age=32
+  // user.address=大阪府
+</script>
+</body>
+</html>
