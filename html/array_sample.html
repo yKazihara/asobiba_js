@@ -59,6 +59,35 @@
 
   console.log(data);
   // [empty, empty, empty, empty, empty]
+
+  console.log("-----");
+
+  let pref = ['Tokyo', 'Osaka', 'Aichi', 'Kyoto'];
+
+  console.log(pref[0]);
+  console.log(pref[1]);
+  console.log(pref[2]);
+  console.log(pref[3]);
+
+  // Tokyo
+  // Osaka
+  // Aichi
+  // Kyoto
+
+  console.log("-----");
+
+  console.log(pref[4]);
+  // undefined
+
+  console.log("-----");
+
+  pref = ['Tokyo', 'Osaka', 'Aichi', 'Kyoto'];
+  console.log(pref);
+  // ["Tokyo", "Osaka", "Aichi", "Kyoto"]
+
+  pref[1] = 'Nara';
+  console.log(pref);
+  // ["Tokyo", "Nara", "Aichi", "Kyoto"]
 </script>
 </body>
 </html>
