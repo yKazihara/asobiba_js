@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let array = [10, 42, 52];
+  let object = {name:'Yamada', old:28};
+
+  console.log(Array.isArray(array));
+  // true
+
+  console.log(Array.isArray(object));
+  // false
+
+  console.log("-----");
+
+  // typeofだとオブジェクトとして判断される
+
+  array = [10, 42, 52];
+  object = {name:'Yamada', old:28};
+
+  console.log(typeof array);
+  // object
+
+  console.log(typeof object);
+  // object
+</script>
+</body>
+</html>
