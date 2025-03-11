@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let data = [10, 42, 52];
+  console.log(data.length);
+  // 3
+
+  console.log("-----");
+
+  data = [];
+  data[0] = 10;
+  data[5] = 35;
+
+  console.log(data.length);
+  // 6
+
+  console.log("-----");
+
+  data = [10, 42, 52];
+  data.length = 5;
+
+  console.log(data);
+  // [10, 42, 52, empty, empty]
+
+  console.log("-----");
+
+  data = [10, 42, 52, 28, 26];
+  data.length = 2;
+
+  console.log(data);
+  // [10, 42]
+</script>
+</body>
+</html>
