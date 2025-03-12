@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['apple', 'melon', 'peach'];
+  fruit[3] = 'banana';
+
+  console.log(fruit);
+  // ["apple", "melon", "peach", "banana"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach'];
+  fruit[fruit.length] = 'grapes';
+
+  console.log(fruit);
+  // ["apple", "melon", "peach", "grapes"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach'];
+  fruit[7] = 'orange';
+
+  console.log(fruit);
+  // ["apple", "melon", "peach", empty, empty, empty, empty, "orange"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach'];
+  fruit.push('orange', 'grapes');
+
+  console.log(fruit);
+  // ["apple", "melon", "peach", "orange", "grapes"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach'];
+  fruit.unshift('orange', 'grapes');
+
+  console.log(fruit);
+  // ["orange", "grapes", "apple", "melon", "peach"]
+</script>
+</body>
+</html>
