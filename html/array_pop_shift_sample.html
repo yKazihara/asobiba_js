@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['apple', 'melon', 'peach'];
+  fruit.pop()
+
+  console.log(fruit);
+  // ["apple", "melon"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach'];
+  fruit.shift();
+
+  console.log(fruit);
+  // ["melon", "peach"]
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach', 'grapes'];
+  console.log(fruit);
+  // ["apple", "melon", "peach", "grapes"]
+
+  fruit.length = 2;
+  console.log(fruit);
+  // ["apple", "melon"]
+
+  fruit.length = 0;
+  console.log(fruit);
+  // []
+
+  console.log("-----");
+
+  fruit = ['apple', 'melon', 'peach', 'grapes'];
+  let fruit2 = fruit;
+
+  console.log(fruit);
+  // ["apple", "melon", "peach", "grapes"]
+  console.log(fruit2);
+  // ["apple", "melon", "peach", "grapes"]
+
+  fruit = [];
+
+  console.log(fruit);
+  // []
+  console.log(fruit2);
+  // ["apple", "melon", "peach", "grapes"]
+</script>
+</body>
+</html>
