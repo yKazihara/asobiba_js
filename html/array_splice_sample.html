@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let alpha = ['A', 'B', 'C', 'D', 'E'];
+
+  // 配列のインデックス 1 の要素から 2 つ分の要素を、 'X' 、 'Y' 、 'Z' の 3 つの要素に置き換え
+  alpha.splice(1, 2, 'X', 'Y', 'Z');
+
+  console.log(alpha);
+  // ["A", "X", "Y", "Z", "D", "E"]
+
+  console.log("-----");
+
+  alpha = ['A', 'B', 'C', 'D', 'E'];
+
+  // 置き換える要素を一つも指定していないので単にインデックス 1 から 2 つ分の要素が削除される
+  alpha.splice(1, 2);
+
+  console.log(alpha);
+  // ["A", "D", "E"]
+
+  console.log("-----");
+
+  alpha = ['A', 'B', 'C', 'D', 'E'];
+
+  // インデックス 1 の要素から 0 つ分の要素を置き換え、
+  // 削除する要素数が 0 なので引数に指定した要素がインデックス 1 の前に追加
+  alpha.splice(1, 0, 'X', 'Y');
+
+  console.log(alpha);
+  // ["A", "X", "Y", "B", "C", "D", "E"]
+</script>
+</body>
+</html>
