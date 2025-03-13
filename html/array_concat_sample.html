@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['Apple', 'Melon', 'Orange'];
+  let fruitAll = fruit.concat(['Peach', 'Grapes']);
+
+  console.log(fruit);
+  // ["Apple", "Melon", "Orange"]
+
+  console.log(fruitAll);
+  // ["Apple", "Melon", "Orange", "Peach", "Grapes"]
+
+  console.log("-----");
+
+  fruitAll = fruit.concat('Peach', ['Grapes', 'Strawberry']);
+
+  console.log(fruitAll);
+  // ["Apple", "Melon", "Orange", "Peach", "Grapes", "Strawberry"]
+
+  console.log("-----");
+
+  fruit = ['Apple', 'Melon', 'Orange'];
+  // 引数を省略した場合は元の配列を複製したものを戻り値として返す
+  let copyFruit = fruit.concat();
+
+  console.log(fruit);
+  // ["Apple", "Melon", "Orange"]
+
+  console.log(copyFruit);
+  // ["Apple", "Melon", "Orange"]
+
+  console.log("-----");
+
+  // 複製した配列に変更を加えても元の配列には影響しない
+  fruit = ['Apple', 'Melon', 'Orange'];
+  copyFruit = fruit.concat();
+
+  copyFruit[1] = 'Grapes';
+  console.log(copyFruit);
+  // ["Apple", "Grapes", "Orange"]
+
+  console.log(fruit);
+  // ["Apple", "Melon", "Orange"]
+</script>
+</body>
+</html>
