@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let week = ['Mon', 'Sat', 'San', 'Sat', 'Fri'];
+
+  // 引数に指定した値を持つ要素を配列の先頭から順に検索し、
+  // 一致したものが見つかった場合はそのインデックスを返します。見つからなかった場合は -1 が返される
+  let indexSat = week.indexOf('Sat');
+  console.log(indexSat);
+  // 1
+
+  let indexTue = week.indexOf('Tue');
+  console.log(indexTue);
+  // -1
+
+  console.log("-----");
+
+  week = ['Mon', 'Sat', 'San', 'Sat', 'Fri'];
+
+  // 引数に指定した値はインデックス 1 の要素に格納されているが、検索の開始位置にインデックス 2 を指定したので
+  // インデックス 2 以降の要素で引数に指定した値を格納している要素のインデックスが返される
+  indexSat = week.indexOf('Sat', 2);
+  console.log(indexSat);
+  // 3
+
+  console.log("-----");
+
+  week = ['Mon', 'Sat', 'San', 'Sat', 'Fri'];
+
+  // 引数に指定した値と一致する要素が複数あった場合、最後から検索して最初に見つかった要素のインデックスを返す
+  indexSat = week.lastIndexOf('Sat');
+  console.log(indexSat);
+  // 3
+
+  indexTue = week.lastIndexOf('Tue');
+  console.log(indexTue);
+  // -1
+
+  console.log("-----");
+
+  week = ['Mon', 'Sat', 'San', 'Sat', 'Fri'];
+
+  // 引数に指定した値はインデックス 3 の要素に格納されているが、検索の開始位置にインデックス 2 を指定したので
+  // インデックス 2 以前の要素で引数に指定した値を格納している要素のインデックスが返される
+  indexSat = week.lastIndexOf('Sat', 2);
+  console.log(indexSat);
+  // 1
+</script>
+</body>
+</html>
