@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['Apple', 'Melon', 'Orange'];
+
+  fruit.forEach(function(element) {
+    console.log(element);
+  });
+  // Apple
+  // Melon
+  // Orange
+
+  console.log("-----");
+
+  fruit.forEach(element => console.log(element));
+  // Apple
+  // Melon
+  // Orange
+
+  console.log("-----");
+
+  fruit.forEach(function(element, index, array){
+    console.log('Index:' + index);
+    console.log('Element:' + element);
+    console.log('Array:' + array);
+  });
+  // Index:0
+  // Element:Apple
+  // Array:Apple,Melon,Orange
+  // Index:1
+  // Element:Melon
+  // Array:Apple,Melon,Orange
+  // Index:2
+  // Element:Orange
+  // Array:Apple,Melon,Orange
+
+  console.log("-----");
+
+  let alpha = ['A', 'B', 'C'];
+
+  alpha.forEach(function(element){
+    console.log(element);
+  });
+  // A
+  // B
+  // C
+
+  console.log("-----");
+
+  for (let i = 0 ; i < alpha.length ; i++){
+    console.log(alpha[i]);
+  }
+  // A
+  // B
+  // C
+
+  console.log("-----");
+
+  for (let element of alpha){
+    console.log(element);
+  }
+  // A
+  // B
+  // C
+
+  console.log("-----");
+
+  alpha = ['A', 'B', , , 'C'];
+
+  alpha.forEach(function(element){
+    console.log(element);
+  });
+  // A
+  // B
+  // C
+
+  console.log("-----");
+
+  for (let i = 0 ; i < alpha.length ; i++){
+    console.log(alpha[i]);
+  }
+  // A
+  // B
+  // undefined
+  // undefined
+  // C
+
+  console.log("-----");
+
+  for (let element of alpha){
+    console.log(element);
+  }
+  // A
+  // B
+  // undefined
+  // undefined
+  // C
+</script>
+</body>
+</html>
