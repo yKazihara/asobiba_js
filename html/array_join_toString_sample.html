@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['Apple', 120, 'Grapes', 80];
+
+  console.log(fruit.join());
+  // Apple,120,Grapes,80
+
+  console.log(fruit.join(' + '));
+  // Apple + 120 + Grapes + 80
+
+  console.log(fruit.join(''));
+  // Apple120Grapes80
+
+  console.log("-----");
+
+  fruit = [['Apple', 120], ['Grapes', 80]];
+
+  console.log(fruit.join(' + '));
+  // Apple,120 + Grapes,80
+
+  console.log("-----");
+
+  let no = [10, 15, , 24];
+
+  console.log(no.join(','));
+  // 10,15,,24
+
+  console.log("-----");
+
+  fruit = ['Apple', 'Grapes', 'Orange'];
+
+  console.log(fruit.toString());
+  // Apple,Grapes,Orange
+</script>
+</body>
+</html>
