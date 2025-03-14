@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let result = [75, 68, 92, 84, 90];
+
+  // 要素の値が 85 よりも大きかどうかを比較し、 true または false を返す。
+  // true が返された時のインデクスをメソッドの戻り値として返す。
+  let passIndex = result.findIndex(function(element){
+    return element > 85;
+  });
+
+  console.log(passIndex);
+  // 2
+
+  console.log("-----");
+
+  passIndex = result.findIndex(element => element > 85);
+  console.log(passIndex);
+  // 2
+
+  console.log("-----");
+
+  let passValue = result.find(function(element){
+    return element > 85;
+  });
+
+  console.log(passValue);
+  // 92
+
+  console.log("-----");
+
+  passValue = result.find(element => element > 85);
+  console.log(passValue);
+  // 92
+
+  console.log("-----");
+
+  let checkOver85 = result.some(function(element){
+    return element > 85;
+  });
+
+  console.log(checkOver85);
+  // true
+
+  let checkUnder60 = result.some(function(element){
+    return element < 60;
+  });
+
+  console.log(checkUnder60);
+  // false
+
+  console.log("-----");
+
+  checkOver85 = result.some(element => element > 85);
+  console.log(checkOver85);
+  // true
+
+  checkUnder60 = result.some(element => element < 60);
+  console.log(checkUnder60);
+  // false
+
+  console.log("-----");
+
+  let checkOver60 = result.every(function(element){
+    return element > 60;
+  });
+
+  console.log(checkOver60);
+  // true
+
+  let checkUnder90 = result.every(function(element){
+    return element < 90;
+  });
+
+  console.log(checkUnder90);
+  // false
+
+  console.log("-----");
+
+  checkOver85 = result.every(element => element > 60);
+  console.log(checkOver85);
+  // true
+
+  checkUnder60 = result.every(element => element < 90);
+  console.log(checkUnder60);
+  // false
+</script>
+</body>
+</html>
