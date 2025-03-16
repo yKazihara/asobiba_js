@@ -29,6 +29,77 @@
   result = dispTotal(7, 1);
   console.log(result);
   // 8
+
+  console.log("-----");
+
+  function dispMessage(msg) {
+    console.log(msg);
+  }
+
+  dispMessage('Hello');
+  // Hello
+
+  dispMessage(100);
+  // 100
+
+  console.log("-----");
+
+  function dispProfile1(name, old) {
+    console.log('name : ' + name);
+    console.log('old : ' + old);
+  }
+
+  dispProfile1('Yamada', 24);
+  // name : Yamada
+  // old : 24
+
+  dispProfile1('Suzuki');
+  // name : Suzuki
+  // old : undefined
+
+  console.log("-----");
+
+  function dispProfile2(name, old) {
+    console.log('name : ' + name);
+    console.log('old : ' + old);
+  }
+
+  dispProfile2('Yamada', 24);
+  // name : Yamada
+  // old : 24
+
+  dispProfile2('Suzuki', 38, 'Kyoto');
+  // name : Suzuki
+  // old : 38
+
+  console.log("-----");
+
+  function dispOrderPrice(price, count=10) {
+    console.log('Total = ' + (price * count));
+  }
+
+  dispOrderPrice(80, 14);
+  // Total = 1120
+
+  dispOrderPrice(120);
+  // Total = 1200
+
+  console.log("-----");
+
+  function calcSum(...num) {
+    let sum = 0;
+    for (let i = 0 ; i < num.length ; i++) {
+      sum += num[i];
+    }
+
+    return sum;
+  }
+
+  console.log(calcSum(1, 2, 3));
+  // 6
+
+  console.log(calcSum(1, 2, 3, 4, 5));
+  // 15
 </script>
 </body>
 </html>
