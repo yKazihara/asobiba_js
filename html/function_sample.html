@@ -100,6 +100,38 @@
 
   console.log(calcSum(1, 2, 3, 4, 5));
   // 15
+
+  console.log("-----");
+
+  // ミュータブル(変更不可)な値を引数に指定して関数を呼びだす場合
+  function square(num) {
+    num = num * num;
+    console.log(num);
+  }
+
+  let num = 10;
+  square(num);
+  // 100
+
+  console.log(num);
+  // 10
+
+  console.log("-----");
+
+  // イミュータブル(変更可)な値を引数に指定して関数を呼びだす場合
+  function square(num) {
+    for (let i = 0 ; i < num.length ; i++) {
+      num[i] = num[i] * num[i];
+    }
+    console.log(num);
+  }
+
+  num = [10, 15, 20];
+  square(num);
+  // [100, 225, 400]
+
+  console.log(num);
+  // [100, 225, 400]
 </script>
 </body>
 </html>
