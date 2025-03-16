@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let result = [48, 75, 92, 61, 54, 83, 76];
+  let total = result.reduce(function(sum, element) {
+    return sum + element;
+  }, 0);
+
+  console.log(total);
+  // 489
+
+  console.log("-----");
+
+  total = result.reduce((sum, element) => sum + element, 0);
+
+  console.log(total);
+  // 489
+
+  console.log("-----");
+
+  let user = [
+    { name:'Yamada', result:75 },
+    { name:'Suzuki', result:91 },
+    { name:'Kudou', result:80 }
+  ];
+
+  total = user.reduce(function(sum, element) {
+    return sum + element.result;
+  }, 0);
+
+  console.log(total);
+  // 246
+</script>
+</body>
+</html>
