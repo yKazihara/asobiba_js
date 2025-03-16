@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let fruit = ['Apple', 'Grapes', 'Melon', 'Orange'];
+  let newfruit = fruit.map(function(element) {
+    return element.toUpperCase();
+  });
+
+  console.log(newfruit);
+  // ["APPLE", "GRAPES", "MELON", "ORANGE"]
+
+  console.log(fruit);
+  // ["Apple", "Grapes", "Melon", "Orange"]
+
+  console.log("-----");
+
+  fruit = ['Apple', 'Grapes', 'Melon', 'Orange'];
+  newfruit = fruit.map(element => element.toUpperCase());
+
+  console.log(newfruit);
+  // ["APPLE", "GRAPES", "MELON", "ORANGE"]
+
+  console.log(fruit);
+  // ["Apple", "Grapes", "Melon", "Orange"]
+</script>
+</body>
+</html>
