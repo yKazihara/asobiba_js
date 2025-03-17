@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function calcArea(radius) {
+    const area = radius * radius * 3.14
+    return area;
+  }
+
+  const area = calcArea(10);
+  console.log(area);
+  // 314
+
+  console.log(calcArea(8));
+  // 200.96
+
+  console.log("-----");
+
+  function calsFee(old) {
+    if (old < 20){
+      console.log('20才未満は利用できません');
+      return;
+    }
+
+    if (old > 30){
+      console.log('利用料は 2,000円です');
+    }else{
+      console.log('利用料は 1,800円です');
+    }
+  }
+
+  calsFee(25);
+  // 利用料は 1,800円です
+  calsFee(18);
+  // 20才未満は利用できません
+
+  console.log("-----");
+
+  function checkNum(num) {
+    if (num % 2 === 0) {
+      console.log('偶数です');
+      return;
+    }
+
+    console.log('奇数です');
+  }
+
+  let ret;
+  ret = checkNum(4);
+  // 偶数です
+  console.log(ret);
+  // undefined
+
+  ret = checkNum(5);
+  // 奇数です
+  console.log(ret);
+  // undefined
+</script>
+</body>
+</html>
