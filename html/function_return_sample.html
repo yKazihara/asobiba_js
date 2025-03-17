@@ -59,6 +59,31 @@
   // 奇数です
   console.log(ret);
   // undefined
+
+  console.log("-----");
+
+  function maxAndMin(num1, num2, num3) {
+    const maxNum = Math.max(num1, num2, num3);
+    const minNum = Math.min(num1, num2, num3);
+
+    return [maxNum, minNum];
+  }
+
+  let numArray = maxAndMin(10, 7, 14);
+
+  console.log("Max = " + numArray[0]);
+  // Max = 14
+  console.log("Min = " + numArray[1]);
+  // Min = 7
+
+  console.log("-----");
+
+  let [maxResult, minResult] = maxAndMin(10, 7, 14);
+
+  console.log("Max = " + maxResult);
+  // Max = 14
+  console.log("Min = " + minResult);
+  // Min = 7
 </script>
 </body>
 </html>
