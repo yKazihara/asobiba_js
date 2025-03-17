@@ -84,6 +84,56 @@
   // Max = 14
   console.log("Min = " + minResult);
   // Min = 7
+
+  console.log("-----");
+
+  function dispTotal1(x, y) {
+    return x + y;
+  }
+
+  console.log(dispTotal1(3, 4));
+  // 7
+
+  console.log("-----");
+
+  console.log(dispTotal2(5, 1));
+
+  function dispTotal2(x, y){
+    return x + y;
+  }
+  // 6
+
+  console.log("-----");
+
+  function dispHello1() {
+    console.log('Hello');
+
+    dispGood1();
+  }
+
+  function dispGood1() {
+    console.log('Good');
+  }
+
+  dispHello1();
+  // Hello
+  // Good
+
+  console.log("-----");
+
+  function dispHello2() {
+    console.log('Hello');
+
+    function dispBye2(){
+      console.log('Bye');
+    }
+
+    dispBye2();
+  }
+
+  dispHello2();
+  // Hello
+  // Bye
 </script>
 </body>
 </html>
