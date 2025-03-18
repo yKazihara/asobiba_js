@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function calcTotal(x, y) {
+    return x + y;
+  }
+
+  console.log(calcTotal);
+  // 変数の値を参照すると関数オブジェクトが表示
+  // function calcTotal(x, y) {
+  //   return x + y;
+  // }
+
+  console.log("-----");
+
+  // 関数オブジェクトが代入された変数を別の変数に代入することもできる
+  let myFunc = calcTotal;
+
+  console.log(myFunc(10, 8));
+  // 18
+
+  console.log("-----");
+
+  calcTotal = function(x, y) {
+    return x + y;
+  }
+
+  console.log(calcTotal(10, 8));
+  // 18
+
+  console.log(calcTotal);
+  // function (x, y) {
+  //   return x + y;
+  // }
+</script>
+</body>
+</html>
