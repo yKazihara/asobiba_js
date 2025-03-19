@@ -37,6 +37,48 @@
   // function (x, y) {
   //   return x + y;
   // }
+
+  console.log("-----");
+
+  let dispHello = function() {
+    console.log('Hello');
+    console.log('JavaScript');
+  };
+
+  dispHello();
+  // Hello
+  // JavaScript
+
+  console.log("-----");
+
+  let dispTotal = function(x, y) {
+    let sum = x + y;
+    return sum;
+  };
+
+  let result = dispTotal(3, 4);
+  console.log(result);
+  // 7
+
+  console.log("-----");
+
+  function dispNum(x, y, func) {
+    console.log(func(x, y));
+  }
+
+  let calcAverage = function(x, y) {
+    return (x + y) / 2;
+  };
+
+  dispNum(10, 8, calcAverage);
+  // 9
+
+  console.log("-----");
+
+  dispNum(10, 8, function(x, y) {
+    return (x + y) / 2;
+  });
+  // 9
 </script>
 </body>
 </html>
