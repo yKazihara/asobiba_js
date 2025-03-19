@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let dispTotal = new Function('x', 'y', 'let sum = x + y;return sum');
+
+  let result = dispTotal(3, 4);
+  console.log(result);
+  // 7
+</script>
+</body>
+</html>
