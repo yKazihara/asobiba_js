@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function dispProfile1(name, old) {
+    console.log('name : ' + name);
+    console.log('old : ' + old);
+  }
+
+  dispProfile1('Yamada', 24, 'Tokyo');
+  // name : Yamada
+  // old : 24
+
+  dispProfile1('Suzuki');
+  // name : Suzuki
+  // old : undefined
+
+  console.log("-----");
+
+  function dispProfile2(name, old) {
+    console.log('arguments.length : ' + arguments.length);
+  }
+
+  dispProfile2('Yamada', 24, 'Tokyo');
+  // arguments.length : 3
+
+  dispProfile2('Suzuki');
+  // arguments.length : 1
+
+  console.log("-----");
+
+  function dispProfile3() {
+    console.log('name : ' + arguments[0]);
+    console.log('old : ' + arguments[1]);
+  }
+
+  dispProfile3('Yamada', 24);
+  // name : Yamada
+  // old : 24
+
+  console.log("-----");
+
+  function dispTotal() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+      sum += arguments[i];
+    }
+
+    console.log('sum = ' + sum);
+  }
+
+  dispTotal(1, 3, 5);
+  // sum = 9
+
+  dispTotal(7, 12, 3, 2, 8);
+  // sum = 32
+</script>
+</body>
+</html>
