@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function test(n) {
+    console.log('Hello');
+
+    if (n != 0) {
+      test(n - 1);
+    }
+
+    console.log('Bye');
+  }
+
+  test(2);
+  // Hello
+  // Hello
+  // Hello
+  // Bye
+  // Bye
+  // Bye
+
+  console.log("-----");
+
+  function calc(n) {
+    if (n == 0) {
+      return 1;
+    }
+
+    return n * calc(n - 1);
+  }
+
+  // 数値の 5 の階乗を計算すると 5 * 4 * 3 * 2 * 1 = 120
+  console.log(calc(5));
+  // 120
+</script>
+</body>
+</html>
