@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function dispTotal1(x, y, z){
+    let sum = x + y + z;
+    return sum;
+  }
+
+  console.log(dispTotal1.length);
+  // 3
+
+  console.log("-----");
+
+  function dispPersonal2(old, name = 'none', address){
+    console.log('old = ' + old);
+    console.log('name = ' + name);
+    console.log('address = ' + address);
+  }
+
+  // 引数の中にデフォルト値が設定された引数がある場合、
+  // length プロパティは最初のデフォルト値が設定された引数の前の引数までの数を返す
+  console.log(dispPersonal2.length);
+  // 1
+
+  console.log("-----");
+
+  function calcSum(start, ...num){
+    let sum = start;
+    for (let i = 0 ; i < num.length ; i++){
+      sum += num[i];
+    }
+
+    return sum;
+  }
+
+  // length プロパティには可変長引数は含まれないため、可変長引数を除いた引数の数を返す
+  console.log(calcSum.length);
+  // 1
+</script>
+</body>
+</html>
