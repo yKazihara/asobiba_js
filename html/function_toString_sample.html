@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function dispTotal1(x, y){
+    let sum = x + y;
+    return sum;
+  }
+
+  console.log(dispTotal1.toString());
+  // function dispTotal1(x, y){
+  //   let sum = x + y;
+  //   return sum;
+  //  }
+
+  console.log("-----");
+
+  let dispTotal2 = function(x, y){
+    let sum = x + y;
+    return sum;
+  }
+
+  console.log(dispTotal2.toString());
+  // function(x, y){
+  //   let sum = x + y;
+  //   return sum;
+  // }
+
+  console.log("-----");
+
+  let dispTotal3 = (x, y) => {
+    let sum = x + y;
+    return sum;
+  }
+
+  console.log(dispTotal3.toString());
+  // (x, y) => {
+  //   let sum = x + y;
+  //   return sum;
+  // }
+
+  console.log("-----");
+
+  let dispTotal4 = new Function('x', 'y', 'let sum = x + y;return sum');
+
+  console.log(dispTotal4.toString());
+  // function anonymous(x,y
+  // ) {
+  // let sum = x + y;return sum
+  // }
+</script>
+</body>
+</html>
