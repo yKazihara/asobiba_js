@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function tomato(price, func) {
+    const name = 'トマト';
+    func(name, price);
+  }
+
+  const price = function(name, price) {
+    console.log(name + ' の値段は ' + price + ' 円です。');
+  }
+
+  tomato(100, price);
+  // トマト の値段は 100 円です。
+
+  console.log("-----");
+
+  tomato(100, function(name, price) {
+    console.log(name + ' の値段は ' + price + ' 円です。');
+  });
+  // トマト の値段は 100 円です。
+
+  console.log("-----");
+
+  tomato(100, (name, price) => {
+    console.log(name + ' の値段は ' + price + ' 円です。');
+  });
+  // トマト の値段は 100 円です。
+
+  console.log("-----");
+
+  const dispBye = function() {
+    console.log('Bye.');
+  }
+
+  // 最初の引数にコールバック関数を指定し、二番目の引数に待機する秒数をミリ秒( 1/1000 秒)単位で指定
+  console.log('Good Morning.')
+
+  setTimeout(dispBye, 3000);
+
+  console.log('How are you?');
+
+  // Good Morning.
+  // How are you?
+
+  // Bye.
+</script>
+</body>
+</html>
