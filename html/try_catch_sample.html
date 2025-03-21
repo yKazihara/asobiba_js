@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function sum(a, b) {
+    let sum;
+    try{
+      sum = a + b;
+    } catch(e) {
+      console.error(e);
+      return null;
+    }
+
+    return sum;
+  }
+
+  console.log('Start');
+
+  console.log(sum(10, 8));
+  console.log(sum(10, 8n));
+
+  console.log('End');
+
+  // Start
+  // 18
+  // TypeError: Cannot mix BigInt and other types, use explicit conversions
+  // null
+  // End
+</script>
+</body>
+</html>
