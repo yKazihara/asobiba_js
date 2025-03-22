@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function sum(a, b) {
+    let sum;
+    sum = a + b;
+
+    return sum;
+  }
+
+  console.log('Start');
+
+  try {
+    console.log(sum(10, 8));
+    console.log(sum(10, 8n));
+  } catch(e) {
+    console.error(e);
+  }
+
+  console.log('End');
+
+  // Start
+  // 18
+  // TypeError: Cannot mix BigInt and other types, use explicit conversions
+  // End
+
+  console.log("-----");
+
+  function sumB(a, b) {
+    let sum;
+    sum = a + b;
+
+    return sum;
+  }
+
+  function sumA(a, b) {
+    return sumB(a, b);
+  }
+
+  console.log('Start');
+
+  try {
+    console.log(sumA(10, 8));
+    console.log(sumA(10, 8n));
+  } catch(e) {
+    console.error(e);
+  }
+
+  console.log('End');
+
+  // Start
+  // 18
+  // TypeError: Cannot mix BigInt and other types, use explicit conversions
+  // End
+
+  console.log("-----");
+
+  console.log('Start');
+
+  try {
+    setTimeout(function sum(a, b) {
+      let sum = a + b;
+      console.log(sum);
+    },1000, 10, 8n);
+  } catch(e) {
+    console.error('例外をキャッチしました');
+  }
+
+  console.log('End');
+
+  // Start
+  // End
+
+  // Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+</script>
+</body>
+</html>
