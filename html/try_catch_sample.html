@@ -30,6 +30,41 @@
   // TypeError: Cannot mix BigInt and other types, use explicit conversions
   // null
   // End
+
+  console.log("-----");
+
+  function returnFixed(num, digits) {
+    try {
+      return num.toFixed(digits)
+    } catch(e) {
+      if (e instanceof RangeError) {
+        console.error('RangeError');
+        return null;
+      } else if (e instanceof TypeError) {
+        console.error('TypeError');
+        return null;
+      } else {
+        console.error(e);
+        return null;
+      }
+    }
+  }
+
+  console.log('Start');
+
+  console.log(returnFixed(3.87654, 3));
+  console.log(returnFixed(3.87654, 1000));
+  console.log(returnFixed('3.87654', 1000));
+
+  console.log('End');
+
+  // Start
+  // 3.877
+  // RangeError
+  // null
+  // TypeError
+  // null
+  // End
 </script>
 </body>
 </html>
