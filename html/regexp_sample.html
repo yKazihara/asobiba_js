@@ -37,6 +37,30 @@
 
   console.log(regexp.test('oaxbo'));
   // false
+
+  console.log("-----");
+
+  regexp = /ball/;
+  let str1 = 'Go to see a baseball game';
+  let str2 = 'Make a cake tomorrow';
+
+  console.log(regexp.test(str1));
+  // true
+
+  console.log(regexp.test(str2));
+  // false
+
+  console.log("-----");
+
+  regexp = /a.e/;
+  str1 = 'Go to see a baseball game';
+  str2 = 'Make a cake tomorrow';
+
+  console.log(regexp.test(str1));
+  // true
+
+  console.log(regexp.test(str2));
+  // true
 </script>
 </body>
 </html>
