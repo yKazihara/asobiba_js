@@ -15,6 +15,28 @@
 
   console.log(regexp2.test(str));
   // false
+
+  console.log("-----");
+
+  // 「a」「.」「b」の 3 つの文字が連続している文字列にマッチ
+  let regexp = /a.b/;
+
+  console.log(regexp.test('oa.bo'));
+  // true
+
+  console.log(regexp.test('oaxbo'));
+  // true
+
+  console.log("-----");
+
+  // 「a」「.」「b」の 3 つの文字が連続している文字列だけにマッチ
+  regexp = /a\.b/;
+
+  console.log(regexp.test('oa.bo'));
+  // true
+
+  console.log(regexp.test('oaxbo'));
+  // false
 </script>
 </body>
 </html>
