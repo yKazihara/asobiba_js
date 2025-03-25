@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  regexp = /20\d{2}-\d{2}-\d{2}/;
+
+  let result = regexp.exec('Yesterday is 1998-12-07');
+  if (result !== null) {
+    console.log(result[0]);
+  } else {
+    console.log('Not Match');
+  }
+  // Not Match
+
+  console.log("-----");
+
+  regexp = /(20\d{2})-(\d{2})-(\d{2})/;
+
+  result = regexp.exec('Today is 2020-08-14');
+  for (let i = 0 ; i < result.length ; i++) {
+    console.log('i=' + i + ', match=' + result[i]);
+  }
+  // i=0, match=2020-08-14
+  // i=1, match=2020
+  // i=2, match=08
+  // i=3, match=14
+
+  console.log("-----");
+
+  regexp = /20\d{2}-\d{2}-\d{2}/;
+
+  result = regexp.exec('Today is 2020-08-14');
+  console.log(result[0]);
+  // 2020-08-14
+  console.log('lastIndex=' + result.index);
+  // lastIndex=9
+
+  console.log("-----");
+</script>
+</body>
+</html>
