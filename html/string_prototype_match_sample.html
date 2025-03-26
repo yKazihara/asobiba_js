@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let regexp = /20\d{2}-\d{2}-\d{2}/;
+  let str1 = 'Today is 2020-08-14';
+  let str2 = 'Yesterday is 1998-12-07';
+
+  try {
+    let result = str1.match(regexp);
+    console.log(result[0]);
+
+    result = str2.match(regexp);
+    console.log(result[0]);
+  } catch(e) {
+    console.log('Not Match');
+  }
+  // 2020-08-14
+  // Not Match
+
+  console.log("-----");
+
+  regexp = /(20\d{2})-(\d{2})-(\d{2})/;
+  let str3 = 'Today is 2020-08-14';
+
+  result = str3.match(regexp);
+  for (let i = 0 ; i < result.length ; i++){
+    console.log('i=' + i + ', match=' + result[i]);
+  }
+  // i=0, match=2020-08-14
+  // i=1, match=2020
+  // i=2, match=08
+  // i=3, match=14
+
+  console.log("-----");
+
+  regexp = /(?<year>20\d{2})-(?<month>\d{2})-(?<day>\d{2})/;
+  let str4 = 'Today is 2020-08-14';
+
+  result = str4.match(regexp);
+  let year = result.groups.year;
+  let month = result.groups.month;
+  let day = result.groups.day;
+
+  console.log(year + '年' + month + '月' + day + '日');
+  // 2020年08月14
+
+  console.log("-----");
+
+  regexp = /20\d{2}-\d{2}-\d{2}/;
+  let str5 = 'Today is 2020-08-14';
+
+  result = str5.match(regexp);
+  console.log(result[0]);
+  // 2020-08-14
+  console.log(result.index);
+  // 9
+</script>
+</body>
+</html>
