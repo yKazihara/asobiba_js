@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let str = 'Border Color is Red, Line Color is RED';
+  let newstr = str.replace(/(Red|RED)/, 'red');
+
+  console.log(newstr);
+  // Border Color is red, Line Color is RED
+
+  console.log("-----");
+
+  str = 'Border Color is Red, Line Color is RED';
+  newstr = str.replace(/(Red|RED)/g, 'red');
+
+  console.log(newstr);
+  // Border Color is red, Line Color is red
+
+  console.log("-----");
+
+  str = '誕生日は 1994-04-21 です';
+  let regexp = /(\d{4})-(\d{2})-(\d{2})/;
+  newstr = str.replace(regexp, '$1年$2月$3日');
+
+  console.log(newstr);
+  // 誕生日は 1994年04月21日 です
+
+  console.log("-----");
+
+  str = 'Border Color is GREEN, Line Color is RED';
+  newstr = str.replace(/[A-Z].+?\b/g, function(match) {
+    return match.toLowerCase();
+  });
+
+  console.log(newstr);
+  // border color is green, line color is red
+</script>
+</body>
+</html>
