@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let regexp = /Sun/;
+
+  console.log(regexp.test('Today is Sunday'));
+  // true
+  console.log(regexp.test('The Sun rose'));
+  // true
+  console.log(regexp.test('Ham Sandwich'));
+  // false
+
+  console.log("-----");
+
+  regexp = /S..d/;
+
+  console.log(regexp.test('Today is Sunday'));
+  // true
+  console.log(regexp.test('The Sun rose'));
+  // false
+  console.log(regexp.test('Ham Sandwich'));
+  // true
+
+  console.log("-----");
+
+  regexp = /[sS]un/;
+
+  console.log(regexp.test('Today is Sunday'));
+  // true
+  console.log(regexp.test('The Sun rose'));
+  // true
+  console.log(regexp.test('Ham Sandwich'));
+  // false
+
+  console.log("-----");
+
+  regexp = /199[^01234]/;
+
+  console.log(regexp.test('My birthday is 1998/03/12'));
+  // true
+  console.log(regexp.test('Graduated in 1994'));
+  // false
+  console.log(regexp.test('It opened in 1996'));
+  // true
+
+  console.log("-----");
+
+  regexp = /199[0-6]/;
+
+  console.log(regexp.test('My birthday is 1998/03/12'));
+  // false
+  console.log(regexp.test('Graduated in 1994'));
+  // true
+  console.log(regexp.test('It opened in 1996'));
+  // true
+
+  console.log("-----");
+
+  let str = '郵便番号は 456-7890 です';
+  regexp = /\d{3}-\d{4}/;
+
+  let result = str.match(regexp);
+  console.log(result[0]);
+  // 456-7890
+
+  console.log("-----");
+
+  str = `こんにちは。
+今日も寒いですね。`;
+  regexp = /。\n./;
+
+  result = str.match(regexp);
+  console.log(result[0]);
+  //  。
+  //  今
+</script>
+</body>
+</html>
