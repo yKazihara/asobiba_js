@@ -78,6 +78,60 @@
   console.log(result[0]);
   //  。
   //  今
+
+  console.log("-----");
+
+  regexp = /^Red/;
+
+  console.log(regexp.test('Red Table'));
+  // true
+  console.log(regexp.test('Reduce speed'));
+  // true
+  console.log(regexp.test('Border Color is Red'));
+  // false
+
+  console.log("-----");
+
+  regexp = /Script$/;
+
+  console.log(regexp.test('JavaScript'));
+  // true
+  console.log(regexp.test('I am studying TypeScript'));
+  // true
+  console.log(regexp.test('PostScript is difficult'));
+  // false
+
+  console.log("-----");
+
+  regexp1 = /\bwork/;
+
+  console.log(regexp1.test('a working person'));
+  // true
+  console.log(regexp1.test('Go to see fireworks'));
+  // false
+
+  regexp2 = /ing\b/;
+
+  console.log(regexp2.test('a working person'));
+  // true
+  console.log(regexp2.test('ingenious design'));
+  // false
+
+  console.log("-----");
+
+  regexp1 = /\Bam/;
+
+  console.log(regexp1.test('Difficult program'));
+  // true
+  console.log(regexp1.test('full amount'));
+  // false
+
+  regexp2 = /am\B/;
+
+  console.log(regexp2.test('full amount'));
+  // true
+  console.log(regexp2.test('Difficult program'));
+  // false
 </script>
 </body>
 </html>
