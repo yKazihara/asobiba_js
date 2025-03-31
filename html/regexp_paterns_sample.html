@@ -132,6 +132,114 @@
   // true
   console.log(regexp2.test('Difficult program'));
   // false
+
+  console.log("-----");
+
+  regexp = /Ha*n/;
+
+  console.log(regexp.test('Hn'));
+  // true
+  console.log(regexp.test('Han'));
+  // true
+  console.log(regexp.test('Haaaaan'));
+  // true
+  console.log(regexp.test('HaaUaan'));
+  // false
+
+  console.log("-----");
+
+  regexp = /Ha+n/;
+
+  console.log(regexp.test('Hn'));
+  // false
+  console.log(regexp.test('Han'));
+  // true
+  console.log(regexp.test('Haaaaan'));
+  // true
+  console.log(regexp.test('HaaUaan'));
+  // false
+
+  console.log("-----");
+
+  regexp = /Ha?n/;
+
+  console.log(regexp.test('Hn'));
+  // true
+  console.log(regexp.test('Han'));
+  // true
+  console.log(regexp.test('Haaaaan'));
+  // false
+  console.log(regexp.test('Ham'));
+  // false
+
+  console.log("-----");
+
+  regexp = /Ha{3}n/;
+
+  console.log(regexp.test('Haaan'));
+  // true
+  console.log(regexp.test('Han'));
+  // false
+  console.log(regexp.test('Haaaaan'));
+  // false
+  console.log(regexp.test('HaaaO'));
+  // false
+
+  console.log("-----");
+
+  regexp = /Ha{2,4}n/;
+
+  console.log(regexp.test('Haan'));
+  // true
+  console.log(regexp.test('Haaaan'));
+  // true
+  console.log(regexp.test('Haaaaan'));
+  // false
+  console.log(regexp.test('HaaaO'));
+  // false
+
+  console.log("-----");
+
+  regexp1 = /<em>.*<\/em>/;
+  str1 = '<p>今日は<em>快晴の</em>一日です</p>';
+
+  result1 = str1.match(regexp1);
+  console.log(result1[0]);
+  // <em>快晴の</em>
+
+  regexp2 = /[0-9]{3}-[0-9]{4}/;
+  str2 = '郵便番号は 123-4567 です';
+
+  result2 = str2.match(regexp2);
+  console.log(result2[0]);
+  // 123-4567
+
+  console.log("-----");
+
+  regexp = /(\d{1,3}\.){3}\d{1,3}/;
+  str = 'IPアドレスは 192.168.0.18 です';
+
+  result = str.match(regexp);
+  console.log(result[0]);
+  // 192.168.0.18
+
+  console.log("-----");
+
+  regexp = /b.*a/;
+  str = 'breakfast is sandwich';
+
+  result = str.match(regexp);
+  console.log(result[0]);
+  // breakfast is sa
+
+  console.log("-----");
+
+  regexp = /b.*?a/;
+  str = 'breakfast is sandwich';
+
+  result = str.match(regexp);
+  console.log(result[0]);
+  // brea
 </script>
 </body>
 </html>
