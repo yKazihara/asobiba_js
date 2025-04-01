@@ -240,6 +240,30 @@
   result = str.match(regexp);
   console.log(result[0]);
   // brea
+
+  console.log("-----");
+
+  regexp = /Sunday|Sun|sunday/;
+
+  console.log(regexp.test('Today is Sunday'));
+  // true
+  console.log(regexp.test('Sunflowers are in bloom'));
+  // true
+  console.log(regexp.test('SUNDAY MORNING'));
+  // false
+
+  console.log("-----");
+
+  regexp = /\b(Red|red)\b/;
+
+  console.log(regexp.test('Red Rose'));
+  // true
+  console.log(regexp.test('reduce the workload'));
+  // false
+  console.log(regexp.test('Border color is red'));
+  // true
+  console.log(regexp.test('predict a result'));
+  // false
 </script>
 </body>
 </html>
