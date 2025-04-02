@@ -264,6 +264,46 @@
   // true
   console.log(regexp.test('predict a result'));
   // false
+
+  console.log("-----");
+
+  regexp = /(\d{3})-(\d{4})/;
+
+  result = regexp.exec('郵便番号は 123-4567 です。');
+  console.log(result[0]);
+  // 123-4567
+  console.log(result[1]);
+  // 123
+  console.log(result[2]);
+  // 4567
+
+  console.log("-----");
+
+  regexp = /製品(?:Code|コード):([A-Z]{2})-(\d{2})/;
+
+  result = regexp.exec('製品コード:AZ-07');
+  console.log(result[1]);
+  // AZ
+  console.log(result[2]);
+  // 07
+
+  console.log("-----");
+
+  regexp = /製品コード:(?<section>[A-Z]{2})-(?<code>\d{2})/;
+
+  result = regexp.exec('製品コード:JP-82');
+  console.log(result.groups.section);
+  // JP
+  console.log(result.groups.code);
+  // 82
+
+  console.log("-----");
+
+  const regex = /<(.+)>.*<\/\1>/;
+
+  result = regex.exec('AAA <div>BBB<span>CCC</span>DDD</div>EEE');
+  console.log(result[0]);
+  // <div>BBB<span>CCC</span>DDD</div>
 </script>
 </body>
 </html>
