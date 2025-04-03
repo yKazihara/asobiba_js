@@ -304,6 +304,66 @@
   result = regex.exec('AAA <div>BBB<span>CCC</span>DDD</div>EEE');
   console.log(result[0]);
   // <div>BBB<span>CCC</span>DDD</div>
+
+  console.log("-----");
+
+  regexp = /smart(?=phone)/;
+
+  console.log(regexp.test('smart'));
+  // false
+  console.log(regexp.test('smartphone'));
+  // true
+  console.log(regexp.test('smartwatch'));
+  // false
+
+  result = regexp.exec('smartphone');
+  console.log(result[0]);
+  // smart
+
+  console.log("-----");
+
+  regexp = /smart(?!phone)/;
+
+  console.log(regexp.test('smart'));
+  // true
+  console.log(regexp.test('smartphone'));
+  // false
+  console.log(regexp.test('smartwatch'));
+  // true
+
+  result = regexp.exec('smartwatch');
+  console.log(result[0]);
+  // smart
+
+  console.log("-----");
+
+  regexp = /(?<=digital)camera/;
+
+  console.log(regexp.test('camera'));
+  // false
+  console.log(regexp.test('digitalcamera'));
+  // true
+  console.log(regexp.test('analogcamera'));
+  // false
+
+  result = regexp.exec('digitalcamera');
+  console.log(result[0]);
+  // camera
+
+  console.log("-----");
+
+  regexp = /(?<!digital)camera/;
+
+  console.log(regexp.test('camera'));
+  // true
+  console.log(regexp.test('digitalcamera'));
+  // false
+  console.log(regexp.test('analogcamera'));
+  // true
+
+  result = regexp.exec('analogcamera');
+  console.log(result[0]);
+  // camera
 </script>
 </body>
 </html>
