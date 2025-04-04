@@ -364,6 +364,64 @@
   result = regexp.exec('analogcamera');
   console.log(result[0]);
   // camera
+
+  console.log("-----");
+
+  regexp = /(Red|RED)/;
+  str = 'Border Color is Red, Line Color is RED';
+
+  newstr = str.replace(regexp, 'red');
+  console.log(newstr);
+  // Border Color is red, Line Color is RED
+
+  console.log("-----");
+
+  regexp = /(Red|RED)/g;
+  str = 'Border Color is Red, Line Color is RED';
+
+  newstr = str.replace(regexp, 'red');
+  console.log(newstr);
+  // Border Color is red, Line Color is red
+
+  console.log("-----");
+
+  regexp = /<span>[a-z]*<\/span>/i;
+  str = 'I\'m going to <span>Kyoto</span> today';
+
+  result = str.match(regexp);
+  console.log(result[0]);
+  // <span>Kyoto</span>
+
+  console.log("-----");
+
+  regexp = /\w{4}Script\.$/;
+  str = `Today we're studying JavaScript.
+Tomorrow will study the TypeScript.`;
+
+  result = regexp.exec(str);
+  console.log(result[0]);
+  // TypeScript.
+
+  console.log("-----");
+
+  regexp = /\w{4}Script\.$/m;
+  str = `Today we're studying JavaScript.
+Tomorrow will study the TypeScript.`;
+
+  result = regexp.exec(str);
+  console.log(result[0]);
+  // JavaScript.
+
+  console.log("-----");
+
+  regexp = /<span>.*<\/span>/s;
+  str = `彼の住所は<span>東京都中央区
+日本橋</span>です。`;
+
+  result = regexp.exec(str);
+  console.log(result[0]);
+  // <span>東京都中央区
+  // 日本橋</span>
 </script>
 </body>
 </html>
