@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(parseInt('14', 10));
+  // 14
+
+  console.log(parseInt('  -128Color', 10));
+  // -128
+
+  console.log(parseInt('3FDCKA', 16));
+  // 16348
+
+  console.log(parseInt('Good80', 10));
+  // NaN
+
+  console.log("-----");
+
+  console.log(parseInt('101', 2));
+  // 5
+
+  console.log(parseInt('310', 2));
+  // NaN
+
+  console.log("-----");
+
+  console.log(parseInt('0x20'));
+  // 32
+
+  console.log(parseInt('20'));
+  // 20
+</script>
+</body>
+</html>
