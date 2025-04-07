@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(NaN == NaN);
+  // false
+
+  console.log(NaN === NaN);
+  // false
+
+  console.log(isNaN(NaN));
+  // true
+
+  console.log("-----");
+
+  console.log(isNaN(10));
+  // false
+
+  console.log(isNaN(Infinity));
+  // false
+
+  console.log("-----");
+
+  console.log(isNaN('Hello'));  // 数値に変換すると NaN
+  // true
+
+  console.log(isNaN('24old'));  // 数値に変換すると NaN
+  // true
+
+  console.log(isNaN('72'));  // 数値に変換すると 72
+  // false
+
+  console.log(isNaN(''));  // 数値に変換すると 0
+  // false
+
+  console.log("-----");
+
+  console.log(isNaN(true));  // 数値に変換すると 1
+  // false
+
+  console.log(isNaN(false));  // 数値に変換すると 0
+  // false
+
+  console.log(isNaN(null));  // 数値に変換すると 0
+  // false
+
+  console.log(isNaN(undefined));  // 数値に変換すると NaN
+  // true
+
+  console.log("-----");
+
+  console.log(isNaN([10]));  // 数値に変換すると 10
+  // false
+
+  console.log(isNaN([10, 20]));  // 数値に変換すると NaN
+  // true
+
+  console.log(isNaN([]));  // 数値に変換すると 0
+  // false
+
+  console.log(isNaN({a:'10'}));  // 数値に変換すると NaN
+  // true
+</script>
+</body>
+</html>
