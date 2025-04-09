@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let str = 'x * y + 10';
+  let x = 8;
+  let y = 5;
+  let z = eval(str);
+
+  console.log(z);
+  // 50
+
+  console.log("-----");
+
+  str = 'z = x * y + 11;console.log(z)';
+
+  eval(str);
+  // 51
+
+  console.log("-----");
+
+  let json = "{'name':'Yamada', 'old':'28'}";
+  let obj = eval('(' + json + ')');
+
+  console.log(eval(obj));
+  // {name: 'Yamada', old: '28'}
+</script>
+</body>
+</html>
