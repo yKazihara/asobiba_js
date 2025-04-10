@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let uri = 'https://www.example.com/ブログ/park.html'
+  console.log(encodeURI(uri));
+  // https://www.example.com/%E3%83%96%E3%83%AD%E3%82%B0/park.html
+
+  uri = 'https://www.example.com/公園.html?place=sea&park'
+  console.log(encodeURI(uri));
+  // https://www.example.com/%E5%85%AC%E5%9C%92.html?place=sea&park
+
+  console.log("-----");
+
+  encodedURI = 'https://www.example.com/%E3%83%96%E3%83%AD%E3%82%B0/park.html'
+  console.log(decodeURI(encodedURI));
+  // https://www.example.com/ブログ/park.html
+
+  console.log("-----");
+
+  uri = 'https://www.example.com/公園.html?';
+  let para = 'place=sea&park'
+  console.log(encodeURIComponent(para));
+  // place%3Dsea%26park
+
+  console.log("-----");
+
+  uri = 'https://www.example.com/ブログ/park.html'
+  console.log(encodeURIComponent(uri));
+  // https%3A%2F%2Fwww.example.com%2F%E3%83%96%E3%83%AD%E3%82%B0%2Fpark.html
+
+  console.log("-----");
+
+  let strEncode = 'place%3Dsea%26park'
+  console.log(decodeURIComponent(strEncode));
+  // place=sea&park
+</script>
+</body>
+</html>
