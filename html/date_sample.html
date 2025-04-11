@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let d = new Date();
+
+  console.log(d.toString());
+  // 例：Sat Apr 12 2025 07:22:29 GMT+0900 (日本標準時)
+
+  console.log(d.toUTCString());
+  // 例：Fri, 11 Apr 2025 22:22:29 GMT
+
+  console.log("-----");
+
+  let d1 = new Date(1000);
+  console.log(d1.toUTCString());
+  // Thu, 01 Jan 1970 00:00:01 GMT
+
+  let d2 = new Date(1602679695309);
+  console.log(d2.toUTCString());
+  // Wed, 14 Oct 2020 12:48:15 GMT
+
+  console.log("-----");
+
+  d1 = new Date('2020-10-14T21:48:15');
+  console.log(d1.toString());
+  // Wed Oct 14 2020 21:48:15 GMT+0900 (日本標準時)
+
+  d2 = new Date('2020-10-14T21:48:15+0900');
+  console.log(d2.toString());
+  // Wed Oct 14 2020 21:48:15 GMT+0900 (日本標準時)
+
+  let d3 = new Date('2020-10-14T21:48:15Z');
+  console.log(d3.toString());
+  // Thu Oct 15 2020 06:48:15 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d1 = new Date(2012, 9);
+  console.log(d1.toString());
+  // Mon Oct 01 2012 00:00:00 GMT+0900 (日本標準時)
+
+  d2 = new Date(96, 3, 24);
+  console.log(d2.toString());
+  // Wed Apr 24 1996 00:00:00 GMT+0900 (日本標準時)
+
+  d3 = new Date(2020, 9, 14, 16, 28, 5, 114);
+  console.log(d3.toString());
+  // Wed Oct 14 2020 16:28:05 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  let str = Date();
+  console.log(str);
+  // 例：Sat Apr 12 2025 07:26:26 GMT+0900 (日本標準時)
+
+  console.log(typeof str)
+  // string
+</script>
+</body>
+</html>
