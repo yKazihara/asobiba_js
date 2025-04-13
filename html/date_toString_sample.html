@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let d = new Date();
+
+  console.log(d.toString());
+  // 例：Sun Apr 13 2025 16:21:42 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  console.log(d.toDateString());
+  // 例：Sun Apr 13 2025
+
+  console.log("-----");
+
+  console.log(d.toTimeString());
+  // 例：16:23:49 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  console.log(d.toUTCString());
+  // 例：Sun, 13 Apr 2025 07:24:44 GMT
+
+  console.log(d.toString());
+  // 例：Sun Apr 13 2025 16:24:44 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  console.log(d.toJSON());
+  // 例：2025-04-13T07:25:44.043Z
+
+  console.log(d.toUTCString());
+  // 例：Sun, 13 Apr 2025 07:25:44 GMT
+</script>
+</body>
+</html>
