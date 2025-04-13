@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let d = new Date();
+
+  console.log(d.toLocaleString());
+  // 例：2025/4/14 7:01:39
+
+  console.log(d.toLocaleString('en-US'));
+  // 例：4/14/2025, 7:01:39 AM
+
+  console.log(d.toLocaleString('ja-JP'));
+  // 例：2025/4/14 7:01:39
+
+  console.log(d.toLocaleString('zh-CN'));
+  // 例：2025/4/14 07:01:39
+
+  console.log(d.toLocaleString('fr-FR'));
+  // 例：14/04/2025 07:01:39
+
+  console.log("-----");
+
+console.log(d.toLocaleDateString());
+  // 例：2025/4/14
+
+  console.log(d.toLocaleDateString('en-US'));
+  // 例：4/14/2025
+
+  console.log(d.toLocaleDateString('ja-JP'));
+  // 例：2025/4/14
+
+  console.log(d.toLocaleDateString('zh-CN'));
+  // 例：2025/4/14
+
+  console.log(d.toLocaleDateString('fr-FR'));
+  // 例：14/04/2025
+
+  console.log("-----");
+
+  console.log(d.toLocaleTimeString());
+  // 例：7:05:22
+
+  console.log(d.toLocaleTimeString('en-US'));
+  // 例：7:05:22 AM
+
+  console.log(d.toLocaleTimeString('ja-JP'));
+  // 例：7:05:22
+
+  console.log(d.toLocaleTimeString('zh-CN'));
+  // 例：07:05:22
+
+  console.log(d.toLocaleTimeString('fr-FR'));
+  // 例：07:05:22
+</script>
+</body>
+</html>
