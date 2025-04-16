@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let d = new Date();
+  console.log(d.toString());
+  // 例：Thu Apr 17 2025 06:54:46 GMT+0900 (日本標準時)
+
+  let year = d.getFullYear();
+  let month = d.getMonth() + 1;
+  let day = d.getDate();
+  let dayofweek = d.getDay()
+
+  const dayname = ['日','月','火','水','木','金','土'];
+
+  console.log(year + '年' + month + '月' + day + '日' + '[' + dayname[dayofweek] + ']');
+  // 例：2025年4月17日[木]
+
+  console.log("-----");
+
+  console.log(d.toString());
+  // 例：Thu Apr 17 2025 06:55:58 GMT+0900 (日本標準時)
+
+  let hour = d.getHours();
+  let minute = d.getMinutes();
+  let second = d.getSeconds();
+  let millisecond = d.getMilliseconds();
+
+  console.log(hour + '時' + minute + '分' + second + '.' + millisecond + '秒');
+  // 例：6時55分58.57秒
+
+  console.log("-----");
+
+  console.log(d.toUTCString());
+  // Wed, 16 Apr 2025 21:57:41 GMT
+
+  year = d.getUTCFullYear();
+  month = d.getUTCMonth() + 1;
+  day = d.getUTCDate();
+  dayofweek = d.getUTCDay();
+
+  console.log(year + '年' + month + '月' + day + '日' + '[' + dayname[dayofweek] + ']');
+  // 例：2025年4月16日[水]
+
+  console.log("-----");
+
+  console.log(d.toUTCString());
+  // 例：Wed, 16 Apr 2025 21:58:53 GMT
+
+  hour = d.getUTCHours();
+  minute = d.getUTCMinutes();
+  second = d.getUTCSeconds();
+  millisecond = d.getUTCMilliseconds();
+
+  console.log(hour + '時' + minute + '分' + second + '.' + millisecond + '秒');
+  // 例：21時58分53.916秒
+</script>
+</body>
+</html>
