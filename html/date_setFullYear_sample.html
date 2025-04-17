@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let d = new Date();
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 06:55:04 GMT+0900 (日本標準時)
+
+  d.setFullYear(2018);
+  console.log(d.toString());
+  // 例：Wed Apr 18 2018 06:55:04 GMT+0900 (日本標準時)
+
+  d.setFullYear(2014, 8, 23);
+  console.log(d.toString());
+  // 例：Tue Sep 23 2014 06:07:10 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 06:57:40 GMT+0900 (日本標準時)
+
+  d.setMonth(5);
+  console.log(d.toString());
+  // 例：Wed Jun 18 2025 06:57:40 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toString());
+  // Fri Apr 18 2025 06:58:28 GMT+0900 (日本標準時)
+
+  d.setDate(24);
+  console.log(d.toString());
+  // 例：Thu Apr 24 2025 06:58:28 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 06:59:38 GMT+0900 (日本標準時)
+
+  d.setHours(12);
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 12:59:38 GMT+0900 (日本標準時)
+
+  d.setHours(21, 12, 20, 712);
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 21:12:20 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 07:00:41 GMT+0900 (日本標準時)
+
+  d.setMinutes(4);
+  console.log(d.toString());
+  // Fri Apr 18 2025 07:04:41 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 07:02:47 GMT+0900 (日本標準時)
+
+  d.setSeconds(18);
+  console.log(d.toString());
+  // 例：Fri Apr 18 2025 07:02:18 GMT+0900 (日本標準時)
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.getMilliseconds());
+  // 例：372
+
+  d.setMilliseconds(777);
+  console.log(d.getMilliseconds());
+  // 777
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:04:16 GMT
+
+  d.setUTCFullYear(2017);
+  console.log(d.toUTCString());
+  // 例：Mon, 17 Apr 2017 22:04:16 GMT
+
+  d.setUTCFullYear(1996, 3, 30);
+  console.log(d.toUTCString());
+  // 例：Tue, 30 Apr 1996 22:04:16 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:05:22 GMT
+
+  d.setUTCMonth(2);
+  console.log(d.toUTCString());
+  // 例：Mon, 17 Mar 2025 22:05:22 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:06:10 GMT
+
+  d.setUTCDate(28);
+  console.log(d.toUTCString());
+  // 例：Mon, 28 Apr 2025 22:06:10 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:06:57 GMT
+
+  d.setUTCHours(2);
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 02:06:57 GMT
+
+  d.setUTCHours(19, 36, 8, 284);
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 19:36:08 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:08:16 GMT
+
+  d.setUTCMinutes(17);
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:17:16 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:08:57 GMT
+
+  d.setUTCSeconds(58);
+  console.log(d.toUTCString());
+  // 例：Thu, 17 Apr 2025 22:08:58 GMT
+
+  console.log("-----");
+
+  d = new Date();
+  console.log(d.getUTCMilliseconds());
+  // 例：945
+
+  d.setUTCMilliseconds(846);
+  console.log(d.getUTCMilliseconds());
+  // 846
+</script>
+</body>
+</html>
