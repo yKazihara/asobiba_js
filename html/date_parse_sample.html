@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(Date.parse('1970-01-01T00:00:01Z'));
+  // 1000
+
+  console.log(Date.parse('2020-04-15T12:34:18Z'));
+  // 1586954058000
+
+  console.log(Date.parse('1992-11-04T21:02:45.227+09:00'));
+  // 720878565227
+
+  console.log("-----");
+
+  console.log(Date.UTC(1970,0,1,0,0,1));
+  // 1000
+
+  console.log(Date.UTC(2020,3,15,12,34,18));
+  // 1586954058000
+
+  console.log("-----");
+
+  let millisecond = Date.now();
+  console.log(millisecond);
+  // 例：1745105134654
+
+  let d = new Date(millisecond);
+  console.log(d.toUTCString());
+  // 例：Sat, 19 Apr 2025 23:25:34 GMT
+</script>
+</body>
+</html>
