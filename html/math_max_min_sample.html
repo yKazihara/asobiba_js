@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log(Math.max(4, 10.2, 16, -2));
+  // 16
+
+  console.log(Math.max(7));
+  // 7
+
+  console.log(Math.max());
+  // -Infinity
+
+  console.log("-----");
+
+  console.log(Math.max(7, '8.4', [3]));
+  // 8.4
+
+  console.log(Math.max(4, NaN));
+  // NaN
+
+  console.log(Math.max(8, 2, undefined));
+  // NaN
+
+  console.log("-----");
+
+  console.log(Math.min(4, 10.2, 16, -2));
+  // -2
+
+  console.log(Math.min(7));
+  // 7
+
+  console.log(Math.min());
+  // Infinity
+
+  console.log("-----");
+
+  console.log(Math.min(7, '8.4', [3]));
+  // 3
+
+  console.log(Math.min(4, NaN));
+  // NaN
+
+  console.log(Math.min(8, 2, undefined));
+  // NaN
+</script>
+</body>
+</html>
