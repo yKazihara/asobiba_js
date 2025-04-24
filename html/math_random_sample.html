@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  for (let i = 0 ; i < 5 ; i++){
+    console.log(Math.random());
+  }
+
+  // 例
+  // 0.6492606110215291
+  // 10 0.6475385172509862
+  // 10 0.754525990619131
+  // 10 0.09860044615989705
+  // 10 0.2631198891008514
+
+  console.log("-----");
+
+  for (let i = 0 ; i < 5 ; i++){
+    let num = Math.floor(Math.random() * 10) + 1;
+    console.log(num);
+  }
+
+  // 例
+  // 8
+  // 4
+  // 10
+  // 7
+  // 4
+
+  console.log("-----");
+
+  function getRandam(n, m){
+    for (let i = 0 ; i < 5 ; i++){
+      let num = Math.floor(Math.random() * (m + 1 - n)) + n;
+      console.log(num);
+    }
+  };
+
+  getRandam(11, 20);
+
+  // 例
+  // 17
+  // 12
+  // 17
+  // 17
+  // 16
+</script>
+</body>
+</html>
