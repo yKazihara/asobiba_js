@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  const msg = 'Hello';
+
+  console.log(msg);
+  // Hello
+  console.info(msg);
+  // Hello
+  console.warn(msg);
+  // Hello
+  console.error(msg);
+  // Hello
+
+  console.log("-----");
+
+  const name = '山田';
+  const old = 18;
+  const hobby = ['読書', 'ハイキング'];
+
+  console.log(name, old, hobby);
+  // 山田 18 ["読書", "ハイキング"]
+
+  console.log("-----");
+
+  console.log('名前は %s です。年齢は %d です。', name, old);
+  // 名前は 山田 です。年齢は 18 です。
+
+  console.log("-----");
+
+  console.log('趣味は %O です。', hobby);
+  // 趣味は Array(2) です。
+
+  console.log("-----");
+
+  const style = 'color:#ffffff;background-color:#000000;';
+
+  console.log('名前は %s です。%cこんにちは。', name, style);
+  // 名前は 山田 です。こんにちは。
+</script>
+</body>
+</html>
