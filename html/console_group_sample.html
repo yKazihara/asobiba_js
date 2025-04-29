@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.log('My List');
+
+  console.group('Animal');
+  console.log('Dog');
+  console.log('Cat');
+  console.groupEnd();
+
+  console.group('Plant');
+  console.log('Sunflower');
+  console.log('Cosmos');
+  console.groupEnd();
+
+  console.log('End');
+
+  // My List
+  // Animal
+  //   Dog
+  //   Cat
+  // Plant
+  //   Sunflower
+  //   Cosmos
+  // End
+
+  console.log("-----");
+
+  console.log('My List');
+
+  console.group('Animal');
+
+  console.group('Land');
+  console.log('Lion');
+  console.log('Giraffe');
+  console.groupEnd();
+
+  console.group('Sea');
+  console.log('Dolphin');
+  console.log('Whale');
+  console.groupEnd();
+
+  console.groupEnd();
+
+  console.log('End');
+
+  // My List
+  // Animal
+  //   Land
+  //     Lion
+  //     Giraffe
+  //   Sea
+  //     Dolphin
+  //     Whale
+  // End
+</script>
+</body>
+</html>
