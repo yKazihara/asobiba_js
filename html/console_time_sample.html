@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  console.time('for');
+  for (let i = 0 ; i < 10000 ; i++){
+    let str = 'A';
+  }
+  console.timeEnd('for');
+  // for: 0.363037109375 ms
+
+  console.time('while');
+  let num = 0;
+  while (num < 10000){
+    let str = 'A';
+    num += 1;
+  }
+  console.timeEnd('while');
+  // while: 0.261962890625 ms
+
+  console.log("-----");
+
+  console.time('Report');
+  for (let i = 0 ; i < 10000 ; i++){
+    let str = 'A';
+  }
+
+  console.timeLog('Report');
+  // Report: 0.06298828125 ms
+
+  for (let i = 0 ; i < 10000 ; i++){
+    let num = 1;
+  }
+
+  console.timeLog('Report');
+  // Report: 0.182861328125 ms
+
+  for (let i = 0 ; i < 10000 ; i++){
+    let bool = true;
+  }
+  console.timeEnd('Report');
+  // Report: 0.3330078125 ms
+</script>
+</body>
+</html>
