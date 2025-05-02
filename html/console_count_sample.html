@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  for (let i = 0 ; i < 5 ; i++){
+    console.count();
+  }
+
+  for (let i = 0 ; i < 3 ; i++){
+    console.count('Apple');
+  }
+
+  console.count();
+  console.count('Apple');
+
+  // default: 1
+  // default: 2
+  // default: 3
+  // default: 4
+  // default: 5
+  // Apple: 1
+  // Apple: 2
+  // Apple: 3
+  // default: 6
+  // Apple: 4
+
+  console.log("-----");
+
+  function countTest(name, count){
+    for (let i = 0 ; i < count ; i++){
+      console.count(name);
+    }
+  }
+
+  countTest('Yamada', 3);
+  countTest('Suzuki', 4);
+  countTest('Yamada', 2);
+
+  // Yamada: 1
+  // Yamada: 2
+  // Yamada: 3
+  // Suzuki: 1
+  // Suzuki: 2
+  // Suzuki: 3
+  // Suzuki: 4
+  // Yamada: 4
+  // Yamada: 5
+</script>
+</body>
+</html>
