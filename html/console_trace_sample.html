@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  function funcA(){
+    console.trace();
+  }
+
+  function funcB(){
+    funcA();
+  }
+
+  funcA();
+  funcB();
+
+  //  console.trace
+  // funcA	@	console_trace_sample…veadrvl7bavhl2ak:10
+  // (anonymous)	@	console_trace_sample…veadrvl7bavhl2ak:17
+  // console.trace
+  // funcA	@	console_trace_sample…veadrvl7bavhl2ak:10
+  // funcB	@	console_trace_sample…veadrvl7bavhl2ak:14
+</script>
+</body>
+</html>
