@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<p>フルーツの一覧</p>
+
+<div>
+  <p>スイカ</p>
+  <p>さくらんぼ</p>
+</div>
+
+<div>
+  <p>イチゴ</p>
+  <p>みかん</p>
+</div>
+
+<button onClick="getElements();">要素を取得</button>
+
+<script>
+  function getElements(){
+    let elements = document.getElementsByTagName('p');
+    let len = elements.length;
+    for (let i = 0; i < len; i++){
+      console.log('Text: ' + elements.item(i).textContent);
+    }
+  }
+  // Text: フルーツの一覧
+  // Text: スイカ
+  // Text: さくらんぼ
+  // Text: イチゴ
+  // Text: みかん
+</script>
+</body>
+</html>
