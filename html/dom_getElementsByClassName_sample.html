@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<style type="text/css">
+  div, p{
+    padding:20px;
+    margin:10px;
+    width:30%;
+  }
+  .box{
+    border:1px solid #ff0000;
+  }
+</style>
+<body>
+
+<p>外出記録</p>
+
+<div class="box">
+  <p>今日は外でランチを食べました</p>
+  <p class="box">場所：港区南青山</p>
+  <p class="box">店名：リストランテ南青山</p>
+</div>
+
+<button onClick="getElements();">要素を取得</button>
+
+<script>
+  function getElements(){
+    let elements = document.getElementsByClassName('box');
+    let len = elements.length;
+    for (let i = 0; i < len; i++){
+      elements.item(i).style.border="2px solid #0000ff";
+    }
+  }
+</script>
+</body>
+</html>
