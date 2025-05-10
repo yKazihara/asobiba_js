@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ランチを食べにいきました。</p>
+
+<div class="shop">
+  <p id="place">港区南青山</p>
+  <p id="shopname">リストランテ南青山</p>
+</div>
+
+<p>美味しかったです。</p>
+
+<button onClick="getElement();">要素を取得</button>
+
+<script>
+  function getElement(){
+    element = document.querySelector('#shopname');
+    console.log('Text: ' + element.textContent);
+  }
+  // Text: リストランテ南青山
+</script>
+</body>
+</html>
