@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>今日は外でランチを食べました</p>
+
+<div id="box">
+  <!-- お店の情報 -->
+  <p>場所：港区南青山</p>
+  <p id="shop">店名：リストランテ南青山</p>
+</div>
+
+<button onClick="getElements1();">要素を取得1</button>
+
+<button onClick="getElements2(1);">要素を取得2(前から後)</button>
+<button onClick="getElements2(2);">要素を取得2(後から前)</button>
+
+<button onClick="getElements3();">要素を取得3</button>
+
+<script>
+  function getElements1(){
+    let element = document.getElementById('box');
+    let children = element.childNodes;
+
+    let len = children.length;
+    console.log("ノード数:" + len);
+
+    for (let i = 0; i < len; i++){
+      console.log(children.item(i).nodeName);
+    }
+  }
+  // ノード数:7
+  // #text
+  // #comment
+  // #text
+  // P
+  // #text
+  // P
+  // #text
+
+  function getElements2(direct){
+    let element = document.getElementById('box');
+
+    if (direct == 1){
+      let child = element.firstChild;
+
+      while (child){
+        console.log(child.nodeName);
+        child = child.nextSibling;
+      }
+    }else{
+      let child = element.lastChild;
+
+      while (child){
+        console.log(child.nodeName);
+        child = child.previousSibling;
+      }
+    }
+  }
+  // 要素を取得(前から後)
+  // #text
+  // #comment
+  // #text
+  // P
+  // #text
+  // P
+  // #text
+
+  // 要素を取得(後から前)
+  // #text
+  // P
+  // #text
+  // P
+  // #text
+  // #comment
+  // #text
+
+  function getElements3(direct){
+    let element = document.getElementById('shop');
+
+    let parent = element.parentNode;
+
+    while (parent){
+      console.log(parent.nodeName);
+      parent = parent.parentNode;
+    }
+  }
+  // DIV
+  // BODY
+  // HTML
+  // #document
+</script>
+</body>
+</html>
