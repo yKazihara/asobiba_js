@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>今日は外でランチを食べました</p>
+
+<div id="blog">
+  <p>朝から外出していたのでランチは外で頂きました。</p>
+  <!-- お店の情報 -->
+  <p>場所：港区南青山</p>
+  <p>店名：リストランテ南青山</p>
+</div>
+
+<button onClick="getElements();">要素を取得</button>
+
+<script>
+  function getElements(){
+    const ntype = ['ELEMENT',
+      'ATTRIBUTE',
+      'TEXT',
+      'CDATA_SECTION',
+      'ENTITY_REFERENCE',
+      'ENTITY',
+      'PROCESSING_INSTRUCTION',
+      'COMMENT',
+      'DOCUMENT',
+      'DOCUMENT_TYPE',
+      'DOCUMENT_FRAGMENT',
+      'NOTATION'];
+
+    let element = document.getElementById('blog');
+    let children = element.childNodes;
+
+    let len = children.length;
+    for (let i = 0; i < len; i++){
+      console.log(ntype[children.item(i).nodeType - 1]);
+    }
+  }
+  // TEXT
+  // ELEMENT
+  // TEXT
+  // COMMENT
+  // TEXT
+  // ELEMENT
+  // TEXT
+  // ELEMENT
+  // TEXT
+</script>
+</body>
+</html>
