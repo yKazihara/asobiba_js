@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>今日は外でランチを食べました</p>
+
+<div id="blog">
+  <p>朝から外出していたのでランチは外で頂きました。</p>
+  <div>
+    <p>場所：港区南青山</p>
+    <p>店名：リストランテ南青山</p>
+  </div>
+</div>
+
+<button onClick="getElements();">要素を取得</button>
+<button onClick="getElementsAndWrite();">要素を取得し設定</button>
+
+<script>
+  function getElements(){
+    let elements = document.getElementsByTagName('p');
+    let len = elements.length;
+    for (let i = 0; i < len; i++){
+      console.log(elements.item(i).firstChild.nodeValue);
+    }
+  }
+  // 今日は外でランチを食べました
+  // 朝から外出していたのでランチは外で頂きました。
+  // 場所：港区南青山
+  // 店名：リストランテ南青山
+
+  function getElementsAndWrite(){
+    let elements = document.querySelectorAll('#blog div p');
+    let len = elements.length;
+    for (let i = 0; i < len; i++){
+      let value = elements.item(i).firstChild.nodeValue;
+      elements.item(i).firstChild.nodeValue = '【' + value + '】';
+    }
+  }
+  // 今日は外でランチを食べました
+  // 朝から外出していたのでランチは外で頂きました。
+  // 【場所：港区南青山】
+  // 【店名：リストランテ南青山】
+</script>
+</body>
+</html>
