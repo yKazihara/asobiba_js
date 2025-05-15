@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>今日は外でランチを食べました。</p>
+
+<div id="shopinfo">
+  リストランテ南青山
+  <div>
+    <p>東京都港区<br>南青山</p>
+    <p>洋食</p>
+  </div>
+</div>
+
+<p>美味しかったです。</p>
+
+<button onClick="getElement1();">要素を取得1</button>
+
+<button onClick="getElement2();">要素を取得2</button>
+
+<button onClick="setTextToElement();">新しいテキストを設定</button>
+
+<script>
+  function getElement1() {
+    let element1 = document.getElementById('shopinfo');
+    console.log('-- ここから1 --');
+    console.log(element1.textContent);
+    console.log('-- ここまで1 --');
+  }
+
+  // -- ここから1 --
+  //リストランテ南青山
+  //
+  // 東京都港区南青山
+  // 洋食
+  // -- ここまで1 --
+
+  function getElement2() {
+    let elements2 = document.getElementsByTagName('body');
+    console.log('-- ここから2 --');
+    console.log(elements2[0].textContent);
+    console.log('-- ここまで2 --');
+  }
+  //   -- ここから2 --
+  //   今日は外でランチを食べました。
+  //
+  //
+  //   リストランテ南青山
+  //
+  //   東京都港区南青山
+  //   洋食
+  //
+  //
+  //
+  //   美味しかったです。
+  //
+  //   要素を取得1
+  //
+  //   要素を取得2
+  //
+  //
+  //   function getElement1() {
+  //     let element1 = document.getElementById('shopinfo');
+  //     console.log('-- ここから1 --');
+  //     console.log(element1.textContent);
+  //     console.log('-- ここまで1 --');
+  //   }
+  //
+  //   // -- ここから1 --
+  //   //リストランテ南青山
+  //   //
+  //   // 東京都港区南青山
+  //   // 洋食
+  //   // -- ここまで1 --
+  //
+  //   function getElement2() {
+  //     let elements2 = document.getElementsByTagName('body');
+  //     console.log('-- ここから2 --');
+  //     console.log(elements2[0].textContent);
+  //     console.log('-- ここまで2 --');
+  //   }
+  //
+  //    -- ここまで2 --
+
+  function setTextToElement(){
+    let element = document.getElementById('shopinfo');
+    element.textContent = '南青山の洋食屋さん';
+  }
+  // 今日は外でランチを食べました。
+  // 南青山の洋食屋さん
+  // 美味しかったです。
+</script>
+</body>
+</html>
