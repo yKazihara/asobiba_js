@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>今日は外でランチを食べました。</p>
+
+<div id="shopinfo">
+  <a href="http://www.example.com/">リストランテ南青山</a>
+  <div class="shopaddress">東京都港区南青山</div>
+</div>
+
+<p>美味しかったです。</p>
+
+<button onClick="getElement1();">属性を取得1</button>
+<button onClick="setElement2();">属性を設定2</button>
+<button onClick="getElement3();">属性を取得3</button>
+<button onClick="setElement4();">属性を設定4</button>
+
+<script>
+  function getElement1(){
+    let element = document.getElementById('shopinfo');
+    console.log('href  : ' + element.children[0].href);
+    console.log('class : ' + element.children[1].className);
+    console.log('title : ' + element.children[1].title);
+    console.log('href  : ' + element.children[1].href);
+  }
+  // href  : http://www.example.com/
+  // class : shopaddress
+  // title :
+  // href  : undefined
+
+  function setElement2(){
+    let element = document.getElementById('shopinfo');
+    element.children[0].href = 'http://www.example.jp/';
+    element.children[0].target = '_blank';
+
+    console.log('href   : ' + element.children[0].href);
+    console.log('target : ' + element.children[0].target);
+  }
+  // href   : http://www.example.jp/
+  // target : _blank
+
+  function getElement3(){
+    let element = document.getElementById('shopinfo');
+    console.log('href  : ' + element.children[0].getAttribute('href'));
+    console.log('class : ' + element.children[1].getAttribute('class'));
+  }
+  // href  : http://www.example.com/
+  // class : shopaddress
+
+  function setElement4(){
+    let element = document.getElementById('shopinfo');
+    element.children[0].setAttribute('target', '_blank');
+    element.children[1].setAttribute('class', 'address');
+
+    console.log('target : ' + element.children[0].getAttribute('target'));
+    console.log('class  : ' + element.children[1].getAttribute('class'));
+  }
+  // target : _blank
+  // class  : address
+</script>
+</body>
+</html>
