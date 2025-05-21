@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style>
+    p{
+      color:#0000ff;
+    }
+  </style>
+</head>
+<body>
+<p id="address" style="font-weight:bold;">東京都港区南青山</p>
+
+<button onClick="setElement1();">スタイルを設定</button>
+<button onClick="setElement2();">スタイルをリセット</button>
+<button onClick="setElement3();">スタイルを取得</button>
+
+<script>
+  function setElement1(){
+    let element = document.getElementById('address');
+    element.style.width = '200px';
+    element.style.border = '1px solid #ff0000';
+  }
+
+  function setElement2(){
+    let element = document.getElementById('address');
+    element.style.fontWeight = null;
+  }
+
+  function setElement3(){
+    let element = document.getElementById('address');
+    let style = window.getComputedStyle(element);
+
+    console.log('color:' + style.getPropertyValue('color'));
+    console.log('font-weight:' + style.getPropertyValue('font-weight'));
+    // color:rgb(0, 0, 255)
+    // font-weight:700
+  }
+</script>
+</body>
+</html>
