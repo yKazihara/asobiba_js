@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+<script>
+  let element = document.createElement('div');
+
+  console.log(element.nodeName);
+  // DIV
+  console.log(element.nodeType);
+  // 1
+  console.log(element.nodeValue);
+  // null
+
+  console.log("-----");
+
+  let txtnode = document.createTextNode('Hello');
+
+  console.log(txtnode.nodeName);
+  // #text
+  console.log(txtnode.nodeType);
+  // 3
+  console.log(txtnode.nodeValue);
+  // Hello
+
+  console.log("-----");
+
+  let attrnode = document.createAttribute('id');
+  attrnode.value = 'main';
+
+  console.log(attrnode.nodeName);
+  // id
+  console.log(attrnode.nodeType);
+  // 2
+  console.log(attrnode.nodeValue);
+  // main
+
+  console.log("-----");
+
+  let commentnode = document.createComment('Create by Taro');
+
+  console.log(commentnode.nodeName);
+  // #comment
+  console.log(commentnode.nodeType);
+  // 8
+  console.log(commentnode.nodeValue);
+  // Create by Taro
+
+  console.log("-----");
+
+  let fragment  = document.createDocumentFragment();
+
+  console.log(fragment .nodeName);
+  // #document-fragment
+  console.log(fragment .nodeType);
+  // 11
+  console.log(fragment .nodeValue);
+  // null
+</script>
+</body>
+</html>
