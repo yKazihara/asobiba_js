@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<ul id="shopinfo">
+  <li id="m01">リストランテ南青山</li>
+  <li id="m02">東京都港区南青山</li>
+</ul>
+
+<p>美味しかったです。</p>
+
+<button onClick="executeInsertAdjacentHTML(1);">前にノードを追加</button>
+<button onClick="executeInsertAdjacentHTML(2);">子ノードの先頭にノードを追加</button>
+
+<script>
+  function executeInsertAdjacentHTML(pos) {
+    let element = document.getElementById('shopinfo');
+
+    if (pos == 1) {
+      element.insertAdjacentHTML('beforebegin', '<p>ランチを食べました</p>');
+    } else {
+      element.insertAdjacentHTML('afterbegin', '<li id="m00">洋食屋</li>');
+    }
+  }
+</script>
+</body>
+</html>
