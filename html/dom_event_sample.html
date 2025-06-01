@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button1" onclick="alert('Hello')">
+
+<input type="button" value="button2" onclick="buttonClick()">
+
+<script>
+  function buttonClick(){
+    let d = new Date();
+    console.log(d.toString());
+    // 例：Sun Jun 01 2025 09:22:29 GMT+0900 (日本標準時)
+  }
+</script>
+</body>
+</html>
