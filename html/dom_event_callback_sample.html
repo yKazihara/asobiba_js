@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button0" id="mybutton">
+
+<input type="button" value="button1" id="mybutton1">
+<input type="button" value="button2" id="mybutton2">
+
+<input type="button" value="button3" id="mybutton3">
+
+<input type="button" value="button4" id="mybutton4">
+
+<script>
+  function buttotnClick(){
+    let d = new Date();
+    console.log(d.toString());
+    // 例：Mon Jun 02 2025 06:55:37 GMT+0900 (日本標準時)
+  }
+
+  let button = document.getElementById('mybutton');
+  button.onclick = buttotnClick;
+
+  let button1 = document.getElementById('mybutton1');
+  button1.onclick = function(){
+    let num = Math.floor(Math.random() * 6) + 1;
+    console.log('サイコロの値は' + num + 'です');
+    // 例：サイコロの値は3です
+  };
+
+  let button2 = document.getElementById('mybutton2');
+  button2.onclick = () => {
+    let num = Math.floor(Math.random() * 6) + 1;
+    console.log('サイコロの値は' + num + 'です');
+    // 例：サイコロの値は6です
+  };
+
+  let button3 = document.getElementById('mybutton3');
+  button3.onclick = function(){
+    let d = new Date();
+    console.log(d.toString());
+    // 例：Mon Jun 02 2025 06:59:19 GMT+0900 (日本標準時)
+
+    // 一度呼び出されたらイベントハンドラを解除する
+    this.onclick = null;
+    // 一度ボタンをクリックしたあとは、何度ボタンをクリックしても何も起きない
+  };
+
+  let button4 = document.getElementById('mybutton4');
+  button4.onclick = function(event){
+    console.log('event.type:' + event.type); // event.type:click
+    console.log('event.target:' + event.target); // event.target:[object HTMLInputElement]
+  };
+</script>
+
+</body>
+</html>
