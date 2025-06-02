@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button1" id="mybutton1">
+<input type="button" value="button2" id="mybutton2">
+<input type="button" value="button3" id="mybutton3">
+<input type="button" value="button4" id="mybutton4">
+
+<script>
+  function buttonClick1(){
+    let d = new Date();
+    console.log(d.toString());
+    // 例：Tue Jun 03 2025 07:02:36 GMT+0900 (日本標準時)
+  }
+
+  let button1 = document.getElementById('mybutton1');
+  button1.addEventListener('click', buttonClick1);
+
+  function dispHello(){
+    console.log('Hello');
+  }
+
+  function dispThankyou(){
+    console.log('Thank you');
+  }
+
+  function dispBye(){
+    console.log('Bye');
+  }
+
+  let button2 = document.getElementById('mybutton2');
+  button2.addEventListener('click', dispHello);
+  button2.addEventListener('click', dispThankyou);
+  button2.addEventListener('click', dispBye);
+  button2.addEventListener('click', dispHello);
+  // Hello
+  // Thank you
+  // Bye
+
+  function buttonClick2(){
+    let num = Math.floor(Math.random() * 6) + 1;
+    console.log('サイコロの値は' + num + 'です');
+    // 例：サイコロの値は4です
+    // 一度ボタンをクリックしたあとはボタンをクリックしても何も起こらない
+
+    this.removeEventListener('click', buttonClick2);
+  }
+
+  let button3 = document.getElementById('mybutton3');
+  button3.addEventListener('click', buttonClick2);
+
+  function buttonClick3(event){
+    console.log('event.type:' + event.type);
+    // event.type:click
+    console.log('event.target:' + event.target);
+    // event.target:[object HTMLInputElement]
+  }
+
+  let button4 = document.getElementById('mybutton4');
+  button4.addEventListener('click', buttonClick3);
+</script>
+
+</body>
+</html>
