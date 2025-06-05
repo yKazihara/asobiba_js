@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+
+  <style type="text/css">
+    div {
+      width:300px;
+      background-color:#E5E5E5;
+      text-align:center;
+      padding:20px;
+      border:5px solid #8f8f8f;
+    }
+  </style>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<div id="outer">
+  <input type="button" value="button">
+</div>
+
+<script>
+  let div = document.getElementById('outer');
+
+  div.addEventListener('click', function(event){
+    console.log('currentTarget :');
+    console.log(event.currentTarget);
+    // currentTarget :
+    //   <div id="outer"><input type="button" value="button"></div>
+
+    console.log('target :');
+    console.log(event.target);
+    // target :
+    //   <input type="button" value="button">
+    console.log('-- --');
+  });
+</script>
+
+</body>
+</html>
