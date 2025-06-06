@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>現在変更不可です</p>
+
+<div>
+  <input type="checkbox" id="checkA">
+  <label for="checkA">Java</label>
+
+  <input type="checkbox" id="checkB">
+  <label for="checkB">PHP</label>
+</div>
+
+<script>
+  let checkb = document.getElementById('checkB');
+
+  checkb.addEventListener('click', function(event){
+    alert('変更できません');
+    event.preventDefault();
+  });
+</script>
+
+</body>
+</html>
