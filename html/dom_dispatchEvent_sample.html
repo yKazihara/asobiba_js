@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください</p>
+
+<div>
+  <input type="button" id="btnA" value="buttonA">
+  <input type="button" id="btnB" value="buttonB">
+</div>
+
+<script>
+  let btnA = document.getElementById('btnA');
+  let btnB = document.getElementById('btnB');
+
+  btnA.addEventListener('click', function(event){
+    console.log('buttonA:' + event.isTrusted);
+
+    let newevent = new Event('click');
+    btnB.dispatchEvent(newevent);
+  });
+
+  btnB.addEventListener('click', function(event){
+    console.log('buttonB:' + event.isTrusted);
+  });
+
+  // ボタンAクリック時
+  // buttonA:true
+  // buttonB:false
+
+  // ボタンBクリック時
+  // buttonB:true
+</script>
+
+</body>
+</html>
