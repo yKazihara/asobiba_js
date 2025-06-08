@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button1" id="btn1">
+<input type="button" value="button2" id="btn2">
+<input type="button" value="button3" id="btn3">
+
+<script>
+  function buttonClick(){
+    alert('Click1');
+  }
+
+  let button1 = document.getElementById('btn1');
+  button1.addEventListener('click', buttonClick);
+
+  let button2 = document.getElementById('btn2');
+
+  button2.addEventListener('click', function(){
+    console.log('Click2');
+  });
+
+  button2.addEventListener('mousedown', function(){
+    console.log('MouseDown');
+  });
+
+  button2.addEventListener('mouseup', function(){
+    console.log('MouseUp');
+  });
+
+  let button3 = document.getElementById('btn3');
+
+  button3.addEventListener('click', function(event){
+    let count = event.detail;
+    console.log('Click count is ' + count);
+  });
+</script>
+
+</body>
+</html>
