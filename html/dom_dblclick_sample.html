@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button1" id="button1">
+<input type="button" value="button2" id="button2">
+
+<script>
+  function buttonDoubleClick(){
+    alert('Double Click');
+  }
+
+  let button1 = document.getElementById('button1');
+  button1.addEventListener('dblclick', buttonDoubleClick);
+
+  let button2 = document.getElementById('button2');
+  button2.addEventListener('click', function(){
+    console.log('Click');
+  });
+
+  button2.addEventListener('dblclick', function(){
+    console.log('Double Click');
+  });
+</script>
+
+</body>
+</html>
