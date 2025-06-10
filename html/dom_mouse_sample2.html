@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ボタンをクリックしてください。</p>
+
+<input type="button" value="button" id="btn">
+
+<script>
+  let button = document.getElementById('btn');
+
+  button.addEventListener('click', function(){
+    console.log('Click');
+  });
+
+  button.addEventListener('mousedown', function(){
+    console.log('MouseDown');
+  });
+
+  button.addEventListener('mouseup', function(){
+    console.log('MouseUp');
+  });
+  // MouseDown
+  // MouseUp
+  // Click
+</script>
+
+</body>
+</html>
