@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style type="text/css">
+    #mycanvas{
+      border:1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+
+<p>キャンバスでマウスが動いた軌跡を描きます</p>
+
+<canvas id="mycanvas" width="600" height="200"></canvas>
+
+<script>
+  function mouseMove(event){
+    context.beginPath();
+    context.arc(event.offsetX, event.offsetY, 10, 0, 2 * Math.PI);
+    context.stroke();
+  }
+
+  let mycanvas = document.getElementById('mycanvas');
+  let context = mycanvas.getContext('2d');
+
+  mycanvas.addEventListener('mousemove', mouseMove);
+</script>
+
+</body>
+</html>
