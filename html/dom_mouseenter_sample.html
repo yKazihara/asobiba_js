@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style type="text/css">
+    #mybox{
+      width:600px;
+      height:200px;
+      border:1px solid #000000;
+    }
+    #outerbox{
+      width:400px;
+      height:200px;
+      border:1px solid #000000;
+    }
+
+    #innerbox{
+      border:1px solid #000000;
+      width:200px;
+      height:100px;
+      margin:50px 100px;
+    }
+  </style>
+</head>
+<body>
+
+<p>マウスに合わせて背景色を変えます</p>
+
+<div id="mybox"></div>
+
+<p>マウスのイベントを確認します</p>
+
+<div id="outerbox">
+  <div id="innerbox"></div>
+</div>
+
+<script>
+  function mouseEnter1(){
+    mybox.style.backgroundColor = '#8f8f8f';
+  }
+
+  function mouseLeave1(){
+    mybox.style.backgroundColor = '#ffffff';
+  }
+
+  let mybox = document.getElementById('mybox');
+  mybox.addEventListener('mouseenter', mouseEnter1);
+  mybox.addEventListener('mouseleave', mouseLeave1);
+
+  function mouseEnter2(e){
+    console.log('[mouseEnter] ' + 'current:'
+      + e.currentTarget.id + ', target:' + e.target.id);
+  }
+
+  function mouseLeave2(e){
+    console.log('[mouseLeave] ' + 'current:'
+      + e.currentTarget.id + ', target:' + e.target.id);
+  }
+
+  let outerbox1 = document.getElementById('outerbox');
+  outerbox1.addEventListener('mouseenter', mouseEnter2);
+  outerbox1.addEventListener('mouseleave', mouseLeave2);
+
+  let innerbox1 = document.getElementById('innerbox');
+  innerbox1.addEventListener('mouseenter', mouseEnter2);
+  innerbox1.addEventListener('mouseleave', mouseLeave2);
+
+  // [mouseEnter] current:innerbox, target:innerbox
+  // [mouseLeave] current:innerbox, target:innerbox
+  // ・・・
+
+  function mouseOver(e){
+    console.log('[mouseOver],' + 'current:'
+      + e.currentTarget.id + ', target:' + e.target.id);
+  }
+
+  function mouseOut(e){
+    console.log('[mouseOut ],' + 'current:'
+      + e.currentTarget.id + ', target:' + e.target.id);
+  }
+
+  let outerbox2 = document.getElementById('outerbox');
+  outerbox2.addEventListener('mouseover', mouseOver);
+  outerbox2.addEventListener('mouseout', mouseOut);
+
+  let innerbox2 = document.getElementById('innerbox');
+  innerbox2.addEventListener('mouseover', mouseOver);
+  innerbox2.addEventListener('mouseout', mouseOut);
+
+  // [mouseOver],current:innerbox, target:innerbox
+  // [mouseOut ],current:outerbox, target:outerbox
+</script>
+
+</body>
+</html>
