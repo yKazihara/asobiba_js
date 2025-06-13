@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style type="text/css">
+    #mybox{
+      width:600px;
+      height:200px;
+      border:1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+
+<p>キーを取得</p>
+
+<div id="mybox"></div>
+
+<script>
+  function mouseClick(event){
+    if (event.altKey){
+      console.log('Push Alt Key');
+    }
+
+    if (event.ctrlKey){
+      console.log('Push Control Key');
+    }
+
+    if (event.metaKey){
+      console.log('Push Meta Key');
+    }
+
+    if (event.shiftKey){
+      console.log('Push Shift Key');
+    }
+  }
+
+  let mybox = document.getElementById('mybox');
+  mybox.addEventListener('click', mouseClick);
+
+  // Push Meta Key
+  // Push Shift Key
+</script>
+
+</body>
+</html>

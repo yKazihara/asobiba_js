@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style type="text/css">
+    #mybox{
+      width:600px;
+      height:200px;
+      border:1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+
+<p>座標を取得</p>
+
+<div id="mybox"></div>
+
+<script>
+  function mouseClick(event){
+    console.log('offsetX : ' + event.offsetX);
+    console.log('offsetY : ' + event.offsetY);
+    console.log('clientX : ' + event.clientX);
+    console.log('clientY : ' + event.clientY);
+    console.log('pageX   : ' + event.pageX);
+    console.log('pageY   : ' + event.pageY);
+    console.log('screenX : ' + event.screenX);
+    console.log('screenY : ' + event.screenY);
+  }
+
+  let mybox = document.getElementById('mybox');
+  mybox.addEventListener('click', mouseClick);
+  // offsetX : 384
+  // offsetY : 72
+  // clientX : 393
+  // clientY : 128
+  // pageX   : 393
+  // pageY   : 128
+  // screenX : 402
+  // screenY : 264
+</script>
+
+</body>
+</html>
