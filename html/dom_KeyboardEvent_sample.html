@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+  <style type="text/css">
+    #memo{
+      width:600px;
+      height:200px;
+      border:1px solid #000000;
+    }
+  </style>
+</head>
+<body>
+
+<p>キーを押したかどうか</p>
+
+<textarea id="memo"></textarea>
+
+<script>
+  function keyDown(event){
+    console.log('code:' + event.code + ', key:' + event.key);
+    // 例：
+    // code:KeyE, key:e
+    // code:Enter, key:Enter
+    // code:ShiftLeft, key:Shift
+    // code:KeyM, key:M
+  }
+
+  let textarea = document.getElementById('memo');
+  textarea.addEventListener('keydown', keyDown);
+</script>
+
+</body>
+</html>
