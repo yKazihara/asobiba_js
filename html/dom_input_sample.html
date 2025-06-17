@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<p>
+  <label>名前：<input type="text" id="nametext"></label>
+</p>
+
+<p>
+  <label>出身地：
+    <select id="address">
+      <option value="">選択してください</option>
+      <option value="niigata">新潟県</option>
+      <option value="iwate">岩手県</option>
+      <option value="aomori">青森県</option>
+    </select>
+  </label>
+</p>
+
+<p>
+  <input type="radio" id="economics" name="div" value="economics" checked>
+  <label for="economics">経済学部</label><br>
+  <input type="radio" id="education" name="div" value="education">
+  <label for="education">教育学部</label><br>
+  <input type="radio" id="engineering" name="div" value="engineering ">
+  <label for="engineering">工学部</label><br>
+</p>
+
+<script>
+  function inputChange(event){
+    console.log(event.currentTarget.value);
+  }
+
+  let text = document.getElementById('nametext');
+  text.addEventListener('input', inputChange);
+
+  let address = document.getElementById('address');
+  address.addEventListener('input', inputChange);
+
+  let radioeconomics = document.getElementById('economics');
+  radioeconomics.addEventListener('input', inputChange);
+
+  let radioeducation = document.getElementById('education');
+  radioeducation.addEventListener('input', inputChange);
+
+  let radioengineering = document.getElementById('engineering');
+  radioengineering.addEventListener('input', inputChange);
+</script>
+
+</body>
+</html>
