@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+
+  <style type="text/css">
+    textarea{
+      width:500px;
+      height:100px;
+    }
+  </style>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<textarea id="memo"></textarea>
+
+<script>
+  function copy(event){
+    alert('Copyは禁止です')
+    event.preventDefault();
+  }
+
+  function cut(event){
+    alert('Cutは禁止です')
+    event.preventDefault();
+  }
+
+  function paste(event){
+    alert('Pasteは禁止です')
+    event.preventDefault();
+  }
+
+  let memoarea = document.getElementById('memo');
+  memoarea.addEventListener('copy', copy);
+  memoarea.addEventListener('cut', cut);
+  memoarea.addEventListener('paste', paste);
+</script>
+
+</body>
+</html>
