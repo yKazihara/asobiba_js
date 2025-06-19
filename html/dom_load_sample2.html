@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+
+  <script>
+    function loadFinished(){
+      let zooImg = document.getElementById('zoo');
+      console.log(zooImg.naturalWidth);
+      console.log(zooImg.naturalHeight);
+      // 400
+      // 395
+    }
+
+    window.addEventListener('load', loadFinished);
+  </script>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgppZlLT5YRxXqX9AL39Ki5ok41elIfELFasMf66HLCI9PMUYhG00XxtZ4l_hZofxWcKbt4LM2c_8L8BvFe_hU98Rtnc-5_X4bz6csv-06MAHnKqSezMAmEkfiCuU3__LxXAJ4weRsi5nIK/s400/pet_cat_boroboro.png" id="zoo">
+
+</body>
+</html>
