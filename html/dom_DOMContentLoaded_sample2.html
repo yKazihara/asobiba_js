@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+
+  <script>
+    function domFinished(){
+      let element = document.getElementById('xxx');
+      element.insertAdjacentHTML('afterend', '<p>DOMContentLoaded</p>');
+    }
+
+    document.addEventListener('DOMContentLoaded', domFinished);
+  </script>
+
+</head>
+<body>
+
+<p id="xxx">サンプルページです。</p>
+
+</body>
+</html>
