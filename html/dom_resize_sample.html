@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>ウィンドウのリサイズ</p>
+
+<p id="wsize">width</p>
+<p id="hsize">height</p>
+
+<script>
+  function resizeWindow(event){
+    pw.innerText = 'width:' + window.innerWidth + 'px';
+    ph.innerText = 'height:' + window.innerHeight + 'px';
+  }
+
+  let pw = document.getElementById('wsize');
+  let ph = document.getElementById('hsize');
+
+  pw.innerText = 'width:' + window.innerWidth + 'px';
+  ph.innerText = 'height:' + window.innerHeight + 'px';
+
+  window.addEventListener('resize', resizeWindow);
+  // 例　width:1365px
+  // 例　height:474px
+</script>
+
+</body>
+</html>
