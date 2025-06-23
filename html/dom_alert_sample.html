@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<input type="button" value="button" id="mybtn">
+
+<script>
+  function butotnClick(){
+    alert('保存に失敗しました');
+  }
+
+  let button = document.getElementById('mybtn');
+  button.addEventListener('click', butotnClick);
+</script>
+
+</body>
+</html>
