@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<input type="button" value="open" id="openbtn">
+<input type="button" value="close" id="closebtn">
+
+<script>
+  let newwin;
+
+  let openbutton = document.getElementById('openbtn');
+  openbutton.addEventListener('click', () => {
+    newwin = open('test.html');
+  });
+
+  let closebutton = document.getElementById('closebtn');
+  closebutton.addEventListener('click', () => {
+    newwin.close();
+  });
+</script>
+
+</body>
+</html>
