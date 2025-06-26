@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<input type="button" value="click" id="btnTimer">
+<input type="button" value="cancel" id="btnCancel">
+
+<script>
+  let timerid;
+
+  let btnTimer = document.getElementById('btnTimer');
+  btnTimer.addEventListener('click', function(){
+    timerid = window.setTimeout(function(){
+      alert('時間切れです');
+    }, 5000);
+  });
+
+  let btnCancel = document.getElementById('btnCancel');
+  btnCancel.addEventListener('click', function(){
+    window.clearTimeout(timerid);
+    console.log('キャンセルされました')
+  });
+</script>
+
+</body>
+</html>
