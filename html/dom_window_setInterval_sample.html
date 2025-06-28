@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<input type="button" value="click" id="btnTimer">
+<input type="button" value="cancel" id="btnCancel">
+
+<script>
+  let count = 5;
+  let timerid;
+
+  let btnTimer = document.getElementById('btnTimer');
+  btnTimer.addEventListener('click', function(){
+    timerid = window.setInterval(function(){
+      console.log(count + '秒経過');
+      count += 5;
+    }, 5000);
+  });
+  // 5秒経過
+  // 10秒経過
+  // 15秒経過
+  // ・・・・
+
+  let btnCancel = document.getElementById('btnCancel');
+  btnCancel.addEventListener('click', function(){
+    window.clearInterval(timerid);
+    console.log('setIntervalはキャンセルされました');
+  });
+  // setIntervalはキャンセルされました
+
+</script>
+
+</body>
+</html>
