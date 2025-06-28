@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>ウィンドウの幅と高さ</h1>
+
+<p>ボタンをクリックすると幅と高さを取得します</p>
+
+<input type="button" value="サイズ取得" id="btn">
+
+<p>幅と高さは次のプロパティを参照します</p>
+
+<ul>
+  <li>window.outerWidth   ブラウザの幅</li>
+  <li>window.outerHeight  ブラウザの高さ</li>
+  <li>window.innerWidth   コンテンツ表示領域の幅</li>
+  <li>window.innerHeight  コンテンツ表示領域の高さ</li>
+</ul>
+
+<script>
+  let btn = document.getElementById('btn');
+  btn.addEventListener('click', function(){
+    console.log('innerWidth  :' + window.innerWidth);
+    console.log('innerHeight :' + window.innerHeight);
+
+    const htmlelement = document.documentElement
+    console.log('clientWidth :' + htmlelement.clientWidth);
+    console.log('clientHeight:' + htmlelement.clientHeight);
+  });
+  // innerWidth  :1327
+  // innerHeight :474
+  // clientWidth :1327
+  // clientHeight:474
+</script>
+
+</body>
+</html>
