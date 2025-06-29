@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>ウィンドウの幅と高さ</h1>
+
+<p>ボタンをクリックすると幅と高さを変更します</p>
+
+<input type="button" value="open" id="btnOpen">
+<input type="button" value="change" id="btnChange">
+
+<script>
+  let newwindow;
+  let btnOpen = document.getElementById('btnOpen');
+  let btnChange = document.getElementById('btnChange');
+
+  btnOpen.addEventListener('click', function(){
+    newwindow = open('test1.html', 'mywindow', 'width=400,height=400');
+  });
+
+  btnChange.addEventListener('click', function(){
+    newwindow.resizeBy(50, -50);
+  });
+</script>
+
+</body>
+</html>

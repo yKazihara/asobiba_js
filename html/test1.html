@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テストページ</title>
+</head>
+<body>
+
+<h1>テストページ</h1>
+
+<p>テストページです。</p>
+
+<input type="button" value="change" id="btnChange">
+
+<script>
+  let btnChange = document.getElementById('btnChange');
+  btnChange.addEventListener('click', function(){
+    window.resizeBy(-100, 100);
+  });
+</script>
+
+</body>
+</html>
