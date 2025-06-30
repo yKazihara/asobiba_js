@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>サンプル</h1>
+
+<p>デバイス・ピクセル比を表示します</p>
+
+<input type="button" value="check" id="btnCheck">
+
+<script>
+  let btnCheck = document.getElementById('btnCheck');
+
+  btnCheck.addEventListener('click', function(){
+    console.log(window.devicePixelRatio);
+  });
+  // 2
+</script>
+
+</body>
+</html>
