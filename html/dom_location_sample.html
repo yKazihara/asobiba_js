@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>サンプル</h1>
+
+<p>指定URLのページを読み込んで表示します。</p>
+
+<input type="button" value="new URL" id="btnHref">
+
+<script>
+  let btnHref = document.getElementById('btnHref');
+
+  btnHref.addEventListener('click', function(){
+    location = './test.html';
+  });
+</script>
+
+</body>
+</html>
