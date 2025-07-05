@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>サンプル</h1>
+
+<p>履歴を前後に移動します。</p>
+
+<input type="button" value="back" id="btnBack">
+<input type="button" value="forward" id="btnForward">
+
+<script>
+  let btnBack = document.getElementById('btnBack');
+  btnBack.addEventListener('click', function(){
+    history.back();
+  });
+
+  let btnForward = document.getElementById('btnForward');
+  btnForward.addEventListener('click', function(){
+    history.forward();
+  });
+</script>
+
+</body>
+</html>
