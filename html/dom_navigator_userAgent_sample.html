@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>サンプル</h1>
+
+<p id="msg">ユーザーエージェントを表示します</p>
+
+<script>
+  let element = document.getElementById('msg');
+  element.insertAdjacentHTML('afterend', '<p>' + navigator.userAgent + '</p>');
+</script>
+
+</body>
+</html>
