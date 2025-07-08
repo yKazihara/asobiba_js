@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<h1>サンプル</h1>
+
+<p id="msg">Webページの情報を表示します。</p>
+
+<script>
+  let element = document.getElementById('msg');
+
+  let documentInfo =
+    'characterSet: ' + document.characterSet + '<br>' +
+    'contentType: ' + document.contentType + '<br>' +
+    'domain: ' + document.domain + '<br>' +
+    'lastModified: ' + document.lastModified + '<br>' +
+    'referrer: ' + document.referrer + '<br>' +
+    'title: ' + document.title + '<br>' +
+    'URL: ' + document.URL + '<br>';
+
+  element.insertAdjacentHTML('afterend', '<p>' + documentInfo + '</p>');
+</script>
+
+</body>
+</html>
