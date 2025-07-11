@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <label>感想：<br>
+    <textarea cols="40" rows="5" id="reviewTextarea"></textarea>
+  </label>
+</div>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<p id="msg"></p>
+
+<script>
+  function buttonClick(){
+    msg.innerText = reviewTextarea.value;
+    // ボタンクリックでメッセージ表示
+  }
+
+  let reviewTextarea = document.getElementById('reviewTextarea');
+  reviewTextarea.value = '感想をお願いします';
+  let msg = document.getElementById('msg');
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>

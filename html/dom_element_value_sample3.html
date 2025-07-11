@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <label>感想：<br>
+    <textarea cols="40" rows="5" id="reviewTextarea"></textarea>
+  </label>
+</div>
+
+<p id="msg"></p>
+
+<script>
+  function inputChange(event){
+    msg.innerText = reviewTextarea.value;
+    // tabクリックでメッセージ表示
+  }
+
+  let reviewTextarea = document.getElementById('reviewTextarea');
+  reviewTextarea.addEventListener('change', inputChange);
+  let msg = document.getElementById('msg');
+</script>
+
+</body>
+</html>
