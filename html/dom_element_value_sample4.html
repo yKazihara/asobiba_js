@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <label><input type="checkbox" id="check1">夕食</label>
+  <label><input type="checkbox" id="check2">朝食</label>
+</div>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<script>
+  function buttonClick(){
+    if (checkbox1.checked){
+      console.log('夕食付き');
+    } else {
+      console.log('夕食なし');
+    }
+
+    if (checkbox2.checked){
+      console.log('朝食付き');
+    } else {
+      console.log('朝食なし');
+    }
+  }
+  // 夕食なし
+  // 朝食付き
+
+  let checkbox1 = document.getElementById('check1');
+  let checkbox2 = document.getElementById('check2');
+  checkbox2.checked = true;
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>
