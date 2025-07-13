@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <label><input type="radio" name="fruit" value="orange">オレンジ</label>
+  <label><input type="radio" name="fruit" value="lemon">レモン</label>
+  <label><input type="radio" name="fruit" value="strawberry">ストロベリー</label>
+</div>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<script>
+  function buttonClick(){
+    let checkValue = '';
+
+    for (let i = 0; i < len; i++){
+      if (fruitRadio.item(i).checked){
+        checkValue = fruitRadio.item(i).value;
+      }
+    }
+    console.log('選択されているのは ' + checkValue + ' です');
+    // 選択されているのは orange です
+    // 選択されているのは lemon です
+    // 選択されているのは strawberry です
+  }
+
+  let fruitRadio = document.getElementsByName('fruit');
+  let len = fruitRadio.length;
+  fruitRadio[0].checked = true;
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>

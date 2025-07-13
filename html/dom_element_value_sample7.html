@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <form id="travelbox">
+    <label><input type="radio" name="travel" value="okinawa">沖縄</label>
+    <label><input type="radio" name="travel" value="hokkaidou">北海道</label>
+    <label><input type="radio" name="travel" value="kyoto">京都</label>
+  </form>
+</div>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<script>
+  function buttonClick(){
+    let checkValue = travelbox.elements['travel'].value;
+    console.log('選択されているのは ' + checkValue + ' です');
+    // 選択されているのは hokkaidou です
+    // 選択されているのは okinawa です
+    // 選択されているのは kyoto です
+  }
+
+  let travelbox = document.getElementById('travelbox');
+  travelbox.elements[1].checked = true;
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>
