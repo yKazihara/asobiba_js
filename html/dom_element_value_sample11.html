@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<label for="fruit">選択してください</label>
+<select id="fruit" multiple size="5">
+  <option value="orange">Orange</option>
+  <option value="lemon">Lemon</option>
+  <option value="strawberry">Strawberry</option>
+  <option value="banana">Banana</option>
+  <option value="apple">Apple</option>
+</select>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<script>
+  function buttonClick(){
+    let selectOptions = fruitSelect.selectedOptions;
+
+    console.log('現在選択している項目は');
+    for (let i = 0 ; i < selectOptions.length ; i++){
+      console.log(selectOptions[i].value);
+    }
+    console.log('です。');
+    // 現在選択している項目は
+    // orange
+    // です。
+    // 現在選択している項目は
+    // apple
+    // です。
+  }
+
+  let fruitSelect = document.getElementById('fruit');
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>

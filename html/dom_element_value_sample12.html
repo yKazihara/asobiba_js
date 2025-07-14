@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<label for="fruit">選択してください</label>
+<select id="fruit">
+  <option value="orange">Orange</option>
+  <option value="lemon">Lemon</option>
+  <option value="strawberry">Strawberry</option>
+</select>
+
+<script>
+  function valueChange(){
+    console.log('新しく ' + fruitSelect.value + ' を選択しました');
+    // 新しく orange を選択しました
+    // 新しく lemon を選択しました
+    // 新しく strawberry を選択しました
+  }
+
+  let fruitSelect = document.getElementById('fruit');
+  fruitSelect.options[2].selected = true;
+  fruitSelect.addEventListener('change', valueChange);
+</script>
+
+</body>
+</html>
