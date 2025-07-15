@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <label><input type="range" step="10" id="volumeSlider">音量</label>
+</div>
+
+<p id="msg"></p>
+
+<script>
+  function inputChange(event){
+    msg.innerText = '音量は ' + volumeSlider.value + ' です';
+    // 音量は 90 です
+  }
+
+  let volumeSlider = document.getElementById('volumeSlider');
+  volumeSlider.addEventListener('input', inputChange);
+  let msg = document.getElementById('msg');
+</script>
+
+</body>
+</html>
