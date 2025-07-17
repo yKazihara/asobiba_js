@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <input type="file" id="fileBox" multiple >
+</div>
+
+<p id="msg"></p>
+
+<script>
+  function changeFile(){
+    let files = fileBox.files;
+    let filenames = "";
+
+    for(let i = 0 ; i < files.length ; i++){
+      if (i > 0){
+        filenames += ', ';
+      }
+
+      filenames += files[i].name;
+    }
+
+    msg.innerText = '選択しているファイルは ' + filenames + ' です';
+    // 選択しているファイルは memo.txt, self.png です
+  }
+
+  let fileBox = document.getElementById('fileBox');
+  fileBox.addEventListener('change', changeFile);
+  let msg = document.getElementById('msg');
+</script>
+
+</body>
+</html>

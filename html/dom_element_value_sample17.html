@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<div>
+  <input type="file" id="fileBox" multiple >
+</div>
+
+<div>
+  <input type="button" value="Check" id="checkButton">
+</div>
+
+<script>
+  function buttonClick(){
+    console.log('value: ' + fileBox.value);
+
+    let files = fileBox.files;
+
+    for(let i = 0 ; i < files.length ; i++){
+      console.log((i + 1) + '番目のファイル');
+      console.log('name: ' + files[i].name);
+      console.log('size: ' + files[i].size);
+      console.log('type: ' + files[i].type);
+    }
+    // value: C:\fakepath\memo.txt
+    // 1番目のファイル
+    // name: memo.txt
+    // size: 1588
+    // type: text/plain
+  }
+
+  let fileBox = document.getElementById('fileBox');
+
+  let checkButton = document.getElementById('checkButton');
+  checkButton.addEventListener('click', buttonClick);
+</script>
+
+</body>
+</html>
